@@ -1,0 +1,9 @@
+.banner{
+    height: 45vh;
+    /* border: 2px solid black; */
+    background: url('./../assets/How-to-Contact-Us.png');
+    background-repeat: round;
+}
+.card{
+    border-radius: 25px;
+}

@@ -1,0 +1,16 @@
+.banner{
+    height: 45vh;
+    /* border: 2px solid black; */
+    background: url('./../assets/term.png');
+    background-repeat: round;
+}
+.banner h1{
+    margin: 18vh 100px;
+}
+/* .wrapper{
+    font-size: 25px;
+    text-align: justify ;
+} */
+.indent{
+    margin-left: 25px;
+}

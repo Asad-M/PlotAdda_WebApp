@@ -1,0 +1,62 @@
+.search{
+    height: 65vh;
+    padding-top: 14vh;
+    background-image: url('../assets/normal_lp.png');
+    background-repeat: round;
+    /* padding-left: auto ; */
+}
+.search-wrapper{
+    margin: auto;
+    width: 60%;
+    background-color: rgba(59, 59, 59, 0.507);
+
+}
+.search-btn button{
+    width: 150px;
+}
+.search-bar-section label{
+    width: 20%;
+}
+.search-bar-section select{
+    width: 74%;
+    height: 65px;
+}
+.search-bar-section input{
+    width: 77%;
+    height: 65px;
+}
+.search-bar-section button{
+    background-color: rgb(18, 101, 18);
+    height: 65px;
+}
+.form-field{
+    padding-bottom: 0px ;
+}
+.section-two{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+.section-two button {
+    background: rgb(18, 101, 18);
+}
+.section-two .txt{
+    margin: auto;
+
+}
+.card-container img{
+    align-items: center;
+    margin: 25px auto;
+}
+.card1 button{
+    margin: 25px;
+}
+.card1{
+    border-radius: 25px;
+}
+.card-container-main{
+    background: #f7f7f7;
+}
+.about-section{
+    margin: 100px auto;
+}
