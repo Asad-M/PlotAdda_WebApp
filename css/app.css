@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box; 
+    font-family:'Times New Roman', Times, serif ;
+    
 }
 .menu1 {
     margin: 10px 25px;
@@ -16,9 +18,9 @@ a{
     color: #fafafa;
     /* font-weight: bold; */
     font-family: Lato, Arial, Helvetica, sans-serif, serif;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
-menu1 a{
+.menu1 a{
     text-decoration: none;
     color: #fafafa;
     /* font-weight: bold; */
@@ -41,12 +43,13 @@ menu1 a{
 .menu-btn{
     margin: 10px 10px;
 }
-.site-title h1{
-    word-spacing: 50px;
+.site-name h1{
+    word-spacing: 4vw;
     font-family:'Times New Roman', Times, serif ;
     font-weight: bolder;
-    font-size: 50px;
+    font-size: 3vw;
     color: #13A137;;
+    margin-bottom: 0;
 }
 .footer{
     background: #1f1f1f;

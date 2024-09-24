@@ -20,9 +20,9 @@
 </head>
 <body>
   <header>
-    <div class=" d-flex d-none  d-lg-flex header">
+    <div class="header" id="header1">
       <div class="col-5 main">
-        <div class="d-flex p-0 menu1">
+        <div class="d-none d-lg-flex p-0 menu1">
           <div class="menu1">
             <a href="./index.html">
               Home 
@@ -34,12 +34,12 @@
             </a>
           </div>
           <div class="menu1">
-            <a href="./rent.html">
+            <a href="./sell.html">
               Sell
             </a>
           </div>
           <div class="menu1">
-            <a href="./sell.html">
+            <a href="./rent.html">
               Rent
             </a>
           </div>
@@ -49,6 +49,14 @@
             </a>
           </div>
         </div>
+        <div class="d-flex d-lg-none p-0 menu1">
+          <div class="menu1">
+            <button class="btn" onclick="open_menu()">
+              <img id="menu-img" src="./assets/icons8-menu-32.png" alt=""> 
+            </button>
+
+          </div>
+        </div>
       </div>
       <div class="col-2 p-0 logo text-center">
         <a href="./index.html">  
@@ -56,7 +64,7 @@
         </a>
       </div>
       <div class="col-5 main">
-        <div class="d-flex menu1 menu ">
+        <div class="d-none d-lg-flex menu1 menu ">
           <div class="menu2">
             <a href="./find-agent.html">
               Agent
@@ -67,15 +75,15 @@
               Advertise
             </a>
           </div>
-          <div class="menu2">
+          <!-- <div class="menu2">
             <a href="./map.html">
               Map
             </a>
-          </div>
+          </div> -->
           <div class="menu-btn">
-            <a href="./login.html">
-              <button class="btn btn-light" >Login</button>
-            </a>
+            <!-- <a href="./login.html"> -->
+              <button class="btn btn-light" onclick="openLoginModal()">Login</button>
+            <!-- </a> -->
           </div>
           <div class="menu-btn">
             <a href="./sign-up.html">
@@ -83,17 +91,74 @@
             </a>
           </div>
         </div>
+        <div class="d-flex d-lg-none menu1 menu ">
+          <div class="menu-btn">
+            <a href="./sign-up.html">
+              <button class="btn btn-light">SignUp</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="menu-nav-box  p-4" id="menu-box">
+      <div class="nav-box-head d-flex">
+        <div class="col-4">
+          <button class="btn" onclick="close_menu()">
+            <img  src="./assets/icons8-cross-24.png" alt="" >
+          </button>
+        </div>
+        <div class="col-8">
+          <a href="./index.html">  
+            <img class="logo-img" src="./assets/logo-ww.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="nav">
+        <a href="./index.html">
+          Home 
+        </a>
+      </div>
+      <div class="nav">
+        <a href="./buy.html">
+          Buy
+        </a>
+      </div>
+      <div class="nav">
+        <a href="./sell.html">
+          Sell
+        </a>
+      </div>
+      <div class="nav">
+        <a href="./rent.html">
+          Rent
+        </a>
+      </div>
+      <div class="nav">
+        <a href="./commercial.html">
+          Commercial
+        </a>
+      </div>
+      <div class="nav">
+        <a href="./find-agent.html">
+          Agent
+        </a>
+      </div>
+      <div class="nav">
+        <a href="./advertise.html">
+          Advertise
+        </a>
       </div>
     </div>
 
 
-    <div class="site-title ">
-      <h1 class="text-center "> <img src="./as" alt=""> P L O T S A D D A </h1>
+    <div class="site-name ">
+      <h1 class="text-center py-2">  P L O T S A D D A </h1>
     </div>
   </header>
   <div class="main">
-    <div class="section search first">
-      <div class="search-wrapper">
+    <div class="section search first ">
+      <div class="search-wrapper d-none d-lg-block d-md-block">
         <div class="search-heading">
           <h2 class="text-light text-center">
             Search properties for sale & buying in Pakistan
@@ -246,21 +311,21 @@
 
     </div>
     <div class="container">
-      <div class="d-flex section-two">
-        <div class="txt col-6">
+      <div class="d-block d-md-flex d-lg-flex section-two">
+        <div class="txt col-md-6 col-lg-6 col-12 ">
           <h4>Get home recommendations</h4>
           <p>Sign in for a more personalized experience.</p>
           <button class="btn btn-success">Sign in</button>
         </div>
-        <div class="col-6 img">
+        <div class="col-md-6 col-lg-6 col-12img">
 
-          <img src="assets/home-1st-section.jpg" class="col-12" alt="">
+          <img src="assets/home-1st-section.jpg" class="col-12 w-100" alt="">
         </div>
       </div>
     </div>
     <div class=" card-container-main">
-      <div class="container card-container d-flex">
-        <div class="card1 col-4 p-4">
+      <div class="container card-container d-block d-lg-flex d-md-flex">
+        <div class="card1 col-12 col-md-4 col-lg-4 p-4">
           <div class="card text-center" style="border: 1px solid #ddd; border-radius: 2.75rem;">
             <img src="assets/homepage-spot-agent-lg-1.webp" class="w-50 align-center" alt="Home Image">
             <div class="card-title">
@@ -270,28 +335,32 @@
                 </b>
               </h3>
             </div>
-            <p class="card-content">Find your place with an immersive photo experience and the most listings,
+            <p class="card-content px-2">Find your place with an immersive photo experience and the most listings,
               including things you won't find anywhere else.</p>
             <div class="card-actions">
-              <button class="btn btn-outline-primary">Browse homes</button>
+              <a href="./buy.html">
+                <button class="btn btn-outline-primary">Browse homes</button>
+              </a>
             </div>
           </div>
         </div>
-        <div class="card1 col-4 p-4">
+        <div class="card1 col-12 col-md-4 col-lg-4  p-4">
           <div class="card text-center" style="border: 1px solid #ddd; border-radius: 2.75rem;">
             <img src="assets/homepage-spot-sell-lg-1.webp" class="w-50 align-center" alt="Sell a home">
-            <div class="card-body">
+            <div class="card-title my-3">
               <h3>
                 <b>Sell a home</b>
               </h3>
-              <p>No matter what path you take to sell your home, we can help you navigate a successful sale.</p>
+              <p class="card-content px-2">No matter what path you take to sell your home, we can help you navigate a successful sale.</p>
               <div class="card-actions">
-                <button class="btn btn-outline-primary">See your options</button>
+                <a href="./sell.html">
+                  <button class="btn btn-outline-primary">See your options</button>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="card1 col-4 p-4">
+        <div class="card1 col-12 col-md-4 col-lg-4  p-4">
           <div class="card text-center" style="border: 1px solid #ddd; border-radius: 2.75rem;" >
             <img src="assets/homepage-spot-rent-lg-1.webp" class="w-50 align-center" style="width: 50%;">
             <div class="card-title">
@@ -301,10 +370,12 @@
                 </b>
               </h3>
             </div>
-            <p class="card-content">We’re creating a seamless online experience – from shopping on the largest rental
+            <p class="card-content px-2">We’re creating a seamless online experience – from shopping on the largest rental
               network, to applying, to paying rent.</p>
             <div class="card-actions">
-              <button class="btn btn-outline-primary">Find rentals</button>
+              <a href="./rent.html">
+                <button class="btn btn-outline-primary">Find rentals</button>
+              </a>
             </div>
           </div>
         </div>
@@ -320,8 +391,8 @@
 
   <footer>
     <div class="footer">
-      <div class="container d-flex">
-        <div class="col-4 py-4 my-4">
+      <div class="container d-block d-md-flex d-lg-flex">
+        <div class="col-12 col-md-4 col-lg-4 py-4 my-lg-4 my-md-4 my-0">
           <ul>
             <li>
               <h4>Company</h4>
@@ -334,7 +405,7 @@
             <li><a href="./term-of-use.html">Terms of use</a></li>
           </ul>
         </div>
-        <div class="col-4 py-4 my-4">
+        <div class="col-12 col-md-4 col-lg-4 py-4 my-lg-4 my-md-4 my-0">
           <ul>
             <li>
               <h4>Connect</h4>
@@ -345,7 +416,7 @@
             <li><a href="./buy.html">Sale Property</a></li>
           </ul>
         </div>
-        <div class="col-4 py-4 my-4">
+        <div class="col-12 col-md-4 col-lg-4 py-4 my-lg-4 my-md-4 my-0">
           <ul>
             <li>
               <h4>Head Office</h4>

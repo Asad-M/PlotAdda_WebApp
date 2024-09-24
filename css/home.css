@@ -60,3 +60,20 @@
 .about-section{
     margin: 100px auto;
 }
+.menu-nav-box{
+    background: #13A137;
+}
+.menu-nav-box .nav:hover{
+    background-color: #57b76f;
+}
+.menu-nav-box{
+    display: none;
+    width: 100vw;
+    z-index: 2;
+}
+.menu-nav-box .logo-img{
+    width: 40%;
+}
+#header1{
+    display: flex;
+}

@@ -7,3 +7,6 @@
 .card{
     border-radius: 25px;
 }
+#p-type{
+    display: none;
+}

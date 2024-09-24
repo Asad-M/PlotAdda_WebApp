@@ -29,3 +29,6 @@
 input:focus{
     outline-color: #2541df;
 }
+#landload_opt{
+    display: none;
+}
