@@ -77,3 +77,17 @@
 #header1{
     display: flex;
 }
+.s-link-logo{
+    width: 30px;
+}
+
+.whatapp-logo a img{
+    position: fixed;
+    bottom: 30px;
+    z-index: 1000;
+    right:  30px;
+    width: 80px;
+}
+.logo .logo-img{
+    width: 60%;
+}

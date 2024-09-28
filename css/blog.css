@@ -1,0 +1,24 @@
+.banner{
+    height: 500px;
+    background: url('../assets/Blogs-gbg.png');
+    background-repeat: round;
+}
+.blogs-section{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.card img{
+    height: 250px;
+}
+.post_info{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.newsLetter{
+    background: #15A037;
+    color: #fafafa;
+    
+}
+.instaTitle{
+    background: linear-gradient(45deg, #f9ed32 0%, #ee2a7b 62%, #002aff 100%);
+}

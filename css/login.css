@@ -32,3 +32,9 @@ input:focus{
 #landload_opt{
     display: none;
 }
+.s-logo-img{
+    align-items:start;
+    width: 25px;
+    height: 25px;
+}
+
