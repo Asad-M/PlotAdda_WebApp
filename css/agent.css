@@ -3,3 +3,15 @@
     background: url('./../assets/agent.png');
     background-repeat: round;
 }
+@media only screen and (min-width: 600px) and (max-width:1024px) {
+
+    .banner{
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    .banner{
+        height: 250px;
+    }
+}

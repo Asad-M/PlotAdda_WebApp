@@ -22,3 +22,21 @@
 .instaTitle{
     background: linear-gradient(45deg, #f9ed32 0%, #ee2a7b 62%, #002aff 100%);
 }
+@media only screen and (min-width: 600px) and (max-width:1024px) {
+    .blogs-section{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .banner{
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .blogs-section{
+        display: grid;
+        grid-template-columns: auto ;
+    }
+    .banner{
+        height: 250px;
+    }
+}

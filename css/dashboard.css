@@ -1,6 +1,67 @@
-.listing{
-    display: none;
+.sidebar{
+    background: #212529;
 }
-.setting{
-    display:none;
+.main-section{
+    background: #F4F5F7;
+}
+.user{
+    background: #ffffff;
+    border-radius: 25px;
+}
+.user .user-profile-pic{
+    border-radius: 50%;
+    width: 70px;
+}
+.form input{
+    border-radius: 10px;
+    background: #fdf8f800;
+}
+.form textarea{
+    border-radius: 10px;
+    height: 135px;
+    background: #fdf8f800;
+}
+.form select{
+    border-radius: 10px;
+    background: #fdf8f800;
+}
+.blog-posting{
+    text-decoration: none;
+    display: block;
+}
+.label-img{
+    width: 50px;
+    border-radius: 10px;   
+}
+.w-55{
+    width: 55%;
+}
+.w-20{
+    width: 19%;
+}
+.no_of_bath{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.no_of_rooms{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.youtube-icon{
+    width: 25px;
+    height: 20px; 
+}
+.video-link input{
+    border: none;
+}
+.video-link input:focus{
+    outline: none;
+}
+.video-link{
+    border: 1px solid #767676;
+    border-radius: 10px ;
+}
+.video-link:hover {
+    border: 1px solid #2541df;
+    border-radius: 10px ;
 }

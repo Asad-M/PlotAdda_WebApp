@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon"  href="./assets/logo-design.png">
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+  <link rel="icon" type="image/x-icon"  href="../assets/logo-design.png">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="/"> -->
+    <script src="./dashboard.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon"  href="./assets/logo-design.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="../css/home.css" rel="stylesheet">
+    <link href="../CSS/app.css" rel="stylesheet">
+    <link href="../CSS/stylesv.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    <script src="../main.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/app.css">
-    <link rel="stylesheet" href="./css/sell.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link href="css/home.css" rel="stylesheet">
-  <link href="CSS/app.css" rel="stylesheet">
-  <link href="CSS/stylesv.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./css/app.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="./css/login.css">
+   <link rel="stylesheet" href="../css/login.css">
   <script src="./main.js"></script>
-    <title>Sell</title>
 </head>
 <body>
   <header>
@@ -28,27 +35,27 @@
       <div class="col-lg-5 col-md-3 col-3 main">
         <div class="d-none d-lg-flex p-2">
           <div class="menu1 ">
-            <a href="./index.html">
+            <a href="../index.html">
               Home 
             </a>
           </div>
           <div class="menu1">
-            <a href="./buy.html">
+            <a href="../buy.html">
               Buy
             </a>
           </div>
           <div class="menu1">
-            <a href="./sell.html">
+            <a href="../sell.html">
               Sell
             </a>
           </div>
           <div class="menu1">
-            <a href="./rent.html">
+            <a href="../rent.html">
               Rent
             </a>
           </div>
           <div class="menu1">
-            <a href="./commercial.html">
+            <a href="../commercial.html">
               Commercial
             </a>
           </div>
@@ -59,7 +66,7 @@
         <div class="d-flex d-lg-none p-0 menu1">
           <div class="">
             <button class="btn" onclick="open_menu()">
-              <img id="menu-img" src="./assets/icons8-menu-32.png" alt=""> 
+              <img id="menu-img" src="../assets/icons8-menu-32.png" alt=""> 
             </button>
 
           </div>
@@ -69,20 +76,20 @@
       </div>
 
       <div class="col-6 col-lg-2 p-0 logo text-center">
-        <a href="./index.html">  
-          <img class="logo-img  my-2" src="./assets/sm-logo.png" alt="">
+        <a href="../index.html">  
+          <img class="logo-img  my-2" src="../assets/sm-logo.png" alt="">
         </a>
       </div>
 
       <div class="col-3 col-lg-5 main">
         <div class="d-none d-lg-flex menu ">
           <div class="menu2 menu-1">
-            <a href="./find-agent.html">
+            <a href="../find-agent.html">
               Agent
             </a>
           </div>
           <div class="menu2 menu-1">
-            <a href="./advertise.html">
+            <a href="../advertise.html">
               Advertise
             </a>
           </div>
@@ -122,47 +129,47 @@
       <div class="nav-box-head d-flex">
         <div class="col-4">
           <button class="btn" onclick="close_menu()">
-            <img  src="./assets/icons8-cross-24.png" alt="" >
+            <img  src="../assets/icons8-cross-24.png" alt="" >
           </button>
         </div>
         <div class="col-8">
-          <a href="./index.html">  
-            <img class="logo-img" src="./assets/sm-logo.png" alt="">
+          <a href="../index.html">  
+            <img class="logo-img" src="../assets/sm-logo.png" alt="">
           </a>
         </div>
       </div>
       <div class="nav">
-        <a href="./index.html">
+        <a href="../index.html">
           Home 
         </a>
       </div>
       <div class="nav">
-        <a href="./buy.html">
+        <a href="../buy.html">
           Buy
         </a>
       </div>
       <div class="nav">
-        <a href="./sell.html">
+        <a href="../sell.html">
           Sell
         </a>
       </div>
       <div class="nav">
-        <a href="./rent.html">
+        <a href="../rent.html">
           Rent
         </a>
       </div>
       <div class="nav">
-        <a href="./commercial.html">
+        <a href="../commercial.html">
           Commercial
         </a>
       </div>
       <div class="nav">
-        <a href="./find-agent.html">
+        <a href="../find-agent.html">
           Agent
         </a>
       </div>
       <div class="nav">
-        <a href="./advertise.html">
+        <a href="../advertise.html">
           Advertise
         </a>
       </div>
@@ -215,17 +222,17 @@
             <!-- <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
 
             <button class="btn btn-outline-primary w-100 my-2"  data-onsuccess="onSignIn">
-              <img class="s-logo-img col-4" src="./assets/google-logo-removebg-preview.png" alt="">
+              <img class="s-logo-img col-4" src="../assets/google-logo-removebg-preview.png" alt="">
               <span class="col-8 ">
                 Continue with Google
               </span>
             </button>
             <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/facebook-logo-removebg-preview.png" alt="">
+              <img class="s-logo-img" src="../assets/facebook-logo-removebg-preview.png" alt="">
               Continue with Facebook
             </button>
             <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/apple-logo.png" alt="">
+              <img class="s-logo-img" src="../assets/apple-logo.png" alt="">
               Continue with Apple
             </button>
 
@@ -439,7 +446,7 @@
               <button class="btn btn-success w-100 my-2">Sign up</button>
               <p>
                 By submitting, I accept PlotsAdda's 
-                <a class="text-primary" href="./term-of-use.html"> <b>terms of use.</b></a>
+                <a class="text-primary" href="../term-of-use.html"> <b>terms of use.</b></a>
               </p>
             </div>
           </form>
@@ -447,16 +454,16 @@
           <div class="social_link text-center p-4">
             <h6 class="d-block">Or Connect With:</h6>
             <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/google-logo-removebg-preview.png" alt="">
+              <img class="s-logo-img" src="../assets/google-logo-removebg-preview.png" alt="">
                 Continue with Google
       
             </button>
             <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/facebook-logo-removebg-preview.png" alt="">
+              <img class="s-logo-img" src="../assets/facebook-logo-removebg-preview.png" alt="">
               Continue with Facebook
             </button>
             <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/apple-logo.png" alt="">
+              <img class="s-logo-img" src="../assets/apple-logo.png" alt="">
               Continue with Apple
             </button>
           </div>
@@ -468,226 +475,105 @@
       </div>
     </div>
     <!-- Sign-up Modal -->
-
-
-
-
-    <div class="site-name ">
-      <h1 class="text-center">  P L O T S A D D A </h1>
-    </div>
   </header>
-      <div class="main">
-        <div class="banner">
-          <!-- <h1 class="text-center text-light">Sell your home with confidence</h1>
-          <p class="text-center text-light">PlotsAdda is making it simpler to sell your home and move forward.</p> -->
+      <section class="d-flex main-section my-2">
+        <div class="d-flex sidebar flex-column flex-shrink-0 p-3 text-white  col-2" style=" height: 92vh;">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Profolio</span>
+          </a>
+          <hr>
+          <ul class="nav nav-pills flex-column mb-auto">
+            
+            <li>
+              <a href="./dashboard.html" class="nav-link text-white">
+                <!-- <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg> -->
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="./listing.html" class="nav-link text-white">
+                <!-- <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg> -->
+                Property Listing
+              </a>
+            </li>
+            <li>
+              <a id="blog-form" href="./blog-posting.html" class="blog-posting p-3 text-white">
+                <!-- <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg> -->
+                Blog Posting
+              </a>
+            </li>
+            <li>
+              <a href="./admin-control.html" class="nav-link text-white">
+                <!-- <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg> -->
+                Admin Control
+              </a>
+            </li>
+          <li>
+            <li>
+              <a href="./user_setting.html" class="nav-link text-white">
+                <!-- <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg> -->
+                User Setting
+              </a>
+            </li>
+          </ul>
+          <hr>
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+              <strong>User</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="first-block">
+        <div id="dashboard" class="dashboard col-10" style=" height: 92vh; overflow: scroll;">
+         <div class="container">
+            <h1 class=" p-4">Welcome User</h1>
+          <div class="col-12">
+            <div class="show-property">
+              <div class=" px-4 w-100" >
+                <div class="card my-4" >
+                  <div class="d-flex">
 
-          
-          
-        <div class="container ">
-          <div class="d-lg-flex d-md-flex d-block">
-            <div class="col-lg-7 col-md-7 col-12 p-4">
-              <h1>Sell with a PlotsAdda partner agent or get a cash offer</h1>
-              <p>PlotsAdda helps you sell your home, your way. Easily explore your selling options below and get personalized market value estimates — we can even help you choose the best option when you’re ready. This experience is currently available in select markets across the US. <a href="">Click here</a> to see if it's available in your city.</p>
-              <div class="compare">
-                <h5>Compare personalized options, no commitment required</h5>
-                <div class="compare-input d-flex">
-                  <input class="col-lg-11 col-10 px-4" type="text" placeholder="Enter your address">
-                  <button class="col-lg-1 col-2 btn"><img src="./assets/icons8-search-32.png" alt=""></button>
-                </div>
-                <div class="d-lg-flex d-md-flex d-block">
-                  <div class="col-12 col-md-6 col-lg-6 p-4">
-                    <h6 class="py-2"> 
-                      <b>
-                        You can sell directly to Opendoor hassle-free
-                      </b>
-                    </h6>
-                    <p>Get an all-cash offer from our trusted partner, Opendoor, to sell your home on your timeline and avoid the hassle of showings.*</p>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 p-4">
-                    <h6 class="py-2">
-                      <b>
-                        You can sell for more money with a PlotsAdda partner agent
-                      </b>
-                    </h6>
-                    <p>Select PlotsAdda partner agents offer Showcase listings, which sell for 2% more – that’s more than $9K on a home sold at the average home sales price
-                      in the PKR</p>
+                    <img class="card-img-top w-50" src="../assets/1.jpeg" alt="Card image cap">
+                    <div class="card-body w-75">
+                      <h5>Rs: 4,500,000</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p>property owner details</p>
                     </div>
                   </div>
                 </div>
-            </div>
-            <div class="col-lg-5 col-md-5 col-12 py-4">
-              <img class="w-100 my-4" src="./assets/Agent1.png" alt="">
-            </div>
-          </div>
+                <div class="card my-4" >
+                  <div class="d-flex">
 
-          
-        </div>
-      </div>
-      <div class="second-block">
-        <div class="container ">
-          <div class="d-lg-flex d-md-flex d-block">
-            <div class="col-lg-7 col-md-7 col-12 p-4">
-              <h1>Sell traditionally with an agent</h1>
-              <p>Not in a market with PlotsAdda’s new selling experience? Work with a real estate agent for selling support at every step, including prepping, listing and marketing your home.</p>
-              <div class="compare">
-                <button class="btn btn-primary px-4 ">
-                  <a href="./find-agent.html">
-                    Find an agent
-                  </a>
-                </button>
-                
-                <div class="d-lg-flex d-md-flex d-block">
-                  <div class="col-12 col-md-6 col-lg-6 p-4">
-                    <h6 class="py-2"> 
-                      <b>
-                        Why sell traditionally
-                      </b>
-                    </h6>
-                    <ul class="tick_lick">
-                      <li>Potential for bidding wars</li>
-                      <li>Access to local market expertise</li>
-                      <li>Get help negotiating and reviewing offers</li>
-                      <li>Navigate a stressful process with a dedicated guide</li>
-                    </ul>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 p-4">
-                    <h6 class="py-2">
-                      <b>
-                        How to sell traditionally
-                      </b>
-                    </h6>
-                    <p>Learn more about the process of selling your house with a listing agent. If this is the best route for you, interview agents and select a professional who will meet your expectations. Your agent will then guide you through the steps of selling your home.</p>
+                    <img class="card-img-top w-50" src="../assets/1.jpeg" alt="Card image cap">
+                    <div class="card-body w-75">
+                      <h5>Rs: 4,500,000</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p>property owner details</p>
                     </div>
                   </div>
                 </div>
-            </div>
-            <div class="col-lg-5 col-md-5 col-12 py-4">
-              <img class="w-100 my-4" src="./assets/Agent2.jpg" alt="">
-            </div>
-          </div>
+                <div class="card my-4" >
+                  <div class="d-flex">
 
-          
-        </div>
-
-      </div>
-      <div class="third-block">
-        <div class="container ">
-          <div class="d-lg-flex d-md-flex d-block">
-            <div class="col-lg-7 col-md-7 col-12 p-4">
-              <h1>Sell your home yourself</h1>
-              <p>
-                Looking to sell your home without the hassle of a middleman? Our “Sell Your Home Yourself” option gives you complete control over your property listing. Skip the agent commissions, set your own terms, and showcase your home the way you want. With our easy-to-use platform, you can:<br>
-• <b>	Create a Stunning Listing:</b> <br> Upload photos, add a detailed description, and highlight the features that make your home stand out.<br>
-•	<b>Reach Thousands of Buyers:</b> <br>Get your listing seen by interested buyers actively searching for properties like yours.<br>
-•	<b>Set Your Own Price: </b> <br>No need to rely on an agent’s opinion. Price your home according to market trends and your own insights.<br>
-•	<b>Negotiate Directly: </b> <br>Talk to buyers directly, schedule viewings, and handle negotiations without any third-party interference.
-
-              </p>
-              <div class="compare">
-                <button class="btn btn-primary px-4 ">
-                  <a href="./dashboard.html">
-                    Post your home for sale
-                  </a>
-                </button>
-                
-                <!-- <div class="d-flex">
-                  <div class="col-6 p-4">
-                    <h6 class="py-2"> 
-                      <b>
-                        Why sell traditionally
-                      </b>
-                    </h6>
-                    <ul>
-                      <li>Potential for bidding wars</li>
-                      <li>Access to local market expertise</li>
-                      <li>Get help negotiating and reviewing offers</li>
-                      <li>Navigate a stressful process with a dedicated guide</li>
-                    </ul>
-                  </div>
-                  <div class="col-6 p-4">
-                    <h6 class="py-2">
-                      <b>
-                        How to sell traditionally
-                      </b>
-                    </h6>
-                    <p>Learn more about the process of selling your house with a listing agent. If this is the best route for you, interview agents and select a professional who will meet your expectations. Your agent will then guide you through the steps of selling your home.</p>
+                    <img class="card-img-top w-50" src="../assets/1.jpeg" alt="Card image cap">
+                    <div class="card-body w-75">
+                      <h5>Rs: 4,500,000</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p>property owner details</p>
                     </div>
-                  </div> -->
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-5 col-12 py-4">
-              <img class="w-100 my-4" src="./assets/Self-Sale-home.jpg" alt="">
-            </div>
-          </div>
-
-          
-        </div>
-
-      </div>
-      </div>
-
-
-
-
-
-
-
-
-      <footer>
-        <div class="footer">
-          <div class="container d-block d-md-flex d-lg-flex">
-            <div class="col-12 col-md-4 col-lg-4 py-4 my-lg-4 my-md-4 my-0">
-              <ul>
-                <li>
-                  <h4>Company</h4>
-                </li>
-                <li><a href="./about-us.html">About us</a></li>
-                <li><a href="./contact.html">Contact us</a></li>
-                <li><a href="./job.html">Jobs</a></li>
-                <li><a href="./advertise.html">Advertise</a></li>
-                <li><a href="./privacy.html">Privacy policy</a></li>
-                <li><a href="./term-of-use.html">Terms of use</a></li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 py-4 my-lg-4 my-md-4 my-0">
-              <ul>
-                <li>
-                  <h4>Connect</h4>
-                </li>
-                <li><a href="./blog.html">Blog</a></li>
-                <!-- <li><a href="./news.html">News</a></li> -->
-                <li><a href="./find-agent.html">Real Estate Agents</a></li>
-                <li><a href="./sell.html">Sale Property</a></li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 py-4 my-lg-4 my-md-4 my-0">
-              <ul>
-                <li>
-                  <h4>Head Office</h4>
-                </li>
-                <li><a href="">Address</a></li>
-                <li><a href="">Number</a></li>
-                <li><a href="">Time</a></li>
-                <li><a href="">Email us</a></li>
-              </ul>
-              <div class="link-section d-flex m-4">
-                <div class="social-link mx-2" >
-                  <img class="s-link-logo" src="./assets/youtube-logo-removebg-preview.png" alt="">
-                </div>
-                <div class="social-link mx-2">
-                  <img class="s-link-logo" src="./assets/facebook-logo-removebg-preview.png" alt="">
-                </div>
-                <div class="social-link mx-2">
-                  <img class="s-link-logo" src="./assets/insta-logo-removebg-preview.png" alt="">
+                  </div>
                 </div>
               </div>
             </div>
+            
           </div>
+         </div>
         </div>
+      </section>
     
-      </footer>
-
 </body>
 </html>
