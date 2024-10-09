@@ -96,11 +96,11 @@
               <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
             </a>
           </div>
-          <div class="menu-btn">
+          <!-- <div class="menu-btn">
             <a >
               <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter-signup">SignUp</button>
             </a>
-          </div>
+          </div> -->
         </div>
 
 
@@ -108,7 +108,7 @@
         <div class="d-flex d-lg-none  menu ">
           <div class="menu-btn">
             <a>
-              <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter-signup">SignUp</button>
+              <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
             </a>
           </div>
         </div>
@@ -178,17 +178,17 @@
             <div class="menu">
               <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link active text-dark" href="#">Sign in</a>
+                  <a class="nav-link  active text-dark" onclick="checkModel('login')" id="login-link"  >Log in</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark" data-toggle="modal" data-target="#exampleModalCenter-signup">New account</a>
+                  <a class="nav-link text-dark" data-toggle="modal" onclick="checkModel('register')" id="register-link">Register</a>
                 </li>
               </ul>
               <hr>
             </div>
           </div>
           <div class="modal-body p-4">
-            <form action="" name="login_form">
+            <form action="" name="login_form" id="loginForm" >
               <div class="py-2">
                 <div class="label">
                   <label for=""><b> Email </b> </label>
@@ -206,46 +206,7 @@
                 <a class="text-primary" href=""> <h6 class="forget" > <b>Forget your Password?</b></h6>  </a>
               </div>
             </form>
-          </div>
-          <hr>
-          <div class="social_link text-center p-4">
-            <h6 class="d-block">Or Connect With:</h6>
-            
-            <!-- <div class="g-signin2 w-100" data-onsuccess="onSignIn"></div> -->
-            <!-- <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
-
-            <button class="btn btn-outline-primary w-100 my-2"  data-onsuccess="onSignIn">
-              <img class="s-logo-img col-4" src="./assets/google-logo-removebg-preview.png" alt="">
-              <span class="col-8 ">
-                Continue with Google
-              </span>
-            </button>
-            <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/facebook-logo-removebg-preview.png" alt="">
-              Continue with Facebook
-            </button>
-            <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/apple-logo.png" alt="">
-              Continue with Apple
-            </button>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Login Modal -->
-
-
-    <!-- Sign-up Modal -->
-    <div class=" modal fade" id="exampleModalCenter-signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle-signup" aria-hidden="true">
-      <div class="  modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content login-modal">
-          <div class=" text-center ">
-            <h4 class="modal-title text-center" id="exampleModalLongTitle">Welcome to PlotsAdda</h4>
-          </div>
-          <div class="modal-body p-4">
-            <form action="">
+            <form action="" id="registerForm">
               <div class="py-2">
                 <div class="label">
                   <label for=""><b> Email </b> </label>
@@ -433,7 +394,6 @@
                   <input type="text" class="w-100 p-1" placeholder="92-0000000000" >
                 </div>
               </div>
-            </div>
             
             <div class="submit text-center px-4">
               <button class="btn btn-success w-100 my-2">Sign up</button>
@@ -443,13 +403,19 @@
               </p>
             </div>
           </form>
+          </div>
           <hr>
           <div class="social_link text-center p-4">
             <h6 class="d-block">Or Connect With:</h6>
-            <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/google-logo-removebg-preview.png" alt="">
+            
+            <!-- <div class="g-signin2 w-100" data-onsuccess="onSignIn"></div> -->
+            <!-- <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+
+            <button class="btn btn-outline-primary w-100 my-2"  data-onsuccess="onSignIn">
+              <img class="s-logo-img col-4" src="./assets/google-logo-removebg-preview.png" alt="">
+              <span class="col-8 ">
                 Continue with Google
-      
+              </span>
             </button>
             <button class="btn btn-outline-primary w-100 my-2">
               <img class="s-logo-img" src="./assets/facebook-logo-removebg-preview.png" alt="">
@@ -459,22 +425,16 @@
               <img class="s-logo-img" src="./assets/apple-logo.png" alt="">
               Continue with Apple
             </button>
+
+
           </div>
         </div>
-        
-      </div>
-        
-        </div>
       </div>
     </div>
-    <!-- Sign-up Modal -->
-
-
-
-
-    <div class="site-name ">
+    <!-- Login Modal -->
+    <!-- <div class="site-name ">
       <h1 class="text-center">  P L O T S A D D A </h1>
-    </div>
+    </div> -->
   </header>
 
   <div class="main">
@@ -492,17 +452,17 @@
         </div>
         <div class="search-btn text-center">
           <button type="button" class="btn btn-light mx-3 my-2"><a class="text-dark" href="./buy.html"> BUY</a></button>
-          <button type="button" class="btn btn-outline-light mx-3 my-2"><a href="./sell.html"> SELL</a></button>
-          <button type="button" class="btn btn-outline-light mx-3 my-2"> <a href="./rent.html"> RENT</a></button>
+          <button type="button" class="btn btn-outline-light mx-3 my-2"><a class="search-btn-a" href="./sell.html"> SELL</a></button>
+          <button type="button" class="btn btn-outline-light mx-3 my-2"> <a class="search-btn-a " href="./rent.html"> RENT</a></button>
         </div>
         <div class="search-bar-section  d-lg-flex d-none ">
-          <div class="col-3 m-2">
-            <div class="bg-light form-field d-flex">
+          <div class="col-3 m-2 mx-4">
+            <div class="bg-light form-field d-flex searchInput">
               <div class="col-3 text-center ">
-                <label class=" py-3 w-100">City</label>
+                <label class=" input-group-text w-100">City</label>
               </div>
-              <div class="col-9">
-              <select class="w-100" >
+              <div class="col-9 ">
+              <select class="w-100 form-select " >
                 <option value="">--Select--</option>
                  <option value="	Abbottabad	">	Abbottabad	</option>
                 <option value="	Attock	">	Attock	</option>
@@ -626,18 +586,18 @@
             </div>
 
           </div>
-          <div class="col-7 my-2">
-            <div class="bg-light d-flex">
+          <div class="col-8 my-2">
+            <div class="bg-light d-flex searchInput">
               <div class="col-3 text-center">
-                <label class="text-center py-3 w-100">Location </label>
+                <label class="text-center input-group-text  w-100">Location </label>
               </div>
-              <div class="col-9">
-                <input class="w-100" type="text" placeholder="" value="">
+              <div class="col-7">
+                <input class="form-control w-100" type="text" placeholder="" value="">
+              </div>
+              <div class="col-2">
+                <button class="btn btn-success w-100 " type="button" id="button-addon2">FIND</button>
               </div>
           </div>
-          </div>
-          <div class="col-2 m-2 ">
-            <button class="btn btn-success w-75 ">FIND</button>
           </div>
 
         </div>

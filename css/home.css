@@ -1,6 +1,6 @@
 .search{
     height: 65vh;
-    padding-top: 14vh;
+    padding-top: 19vh;
     background-image: url('../assets/normal_lp.png');
     background-repeat: round;
     /* padding-left: auto ; */
@@ -19,15 +19,19 @@
 }
 .search-bar-section select{
     width: 78%;
-    height: 65px;
+    height: 38px;
 }
 .search-bar-section input{
     width: 79%;
-    height: 65px;
+    height: 38px;
+}
+.searchInput{
+    border-radius: 10px;
 }
 .search-bar-section button{
+    border-radius: 0;
     background-color: rgb(18, 101, 18);
-    height: 65px;
+    /* height: 65px; */
 }
 .form-field{
     padding-bottom: 0px ;
@@ -90,4 +94,17 @@
 }
 .logo .logo-img{
     width: 60%;
+}
+.search-btn-a{
+
+    padding: 20px 40px;
+}
+.search-btn-a:hover{
+    color: black;
+}
+#registerForm{
+    display: none;
+}
+#login-link{
+    background: #57b76f
 }

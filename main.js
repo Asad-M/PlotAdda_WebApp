@@ -21,7 +21,22 @@ function personType(){
 function home_opt(){
      document.getElementById('home_opt').style.display='block';
 }
+function checkModel(data){
+     var check = data
+     if(check == 'login'){
+          document.getElementById('loginForm').style.display='block';
+          document.getElementById('registerForm').style.display='none';
+          document.getElementById('login-link').style.background='#57b76f';
+          document.getElementById('register-link').style.background='#fafafa';
+          
+     }else if(check == 'register'){
+          document.getElementById('loginForm').style.display='none';
+          document.getElementById('registerForm').style.display='block';
+          document.getElementById('login-link').style.background='#fafafa';
+          document.getElementById('register-link').style.background='#57b76f';
+     }
 
+}
 
 
 
