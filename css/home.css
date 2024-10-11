@@ -98,6 +98,8 @@
 .search-btn-a{
 
     padding: 20px 40px;
+    text-decoration: none;
+    color: #fafafa;
 }
 .search-btn-a:hover{
     color: black;
@@ -107,4 +109,38 @@
 }
 #login-link{
     background: #57b76f
+}
+#login_box{
+    display: none;
+}
+#profile_box{
+    display: block;
+}
+#login_box1{
+    display: none;
+}
+a {
+    text-decoration: none; 
+}
+.project_wrapper{
+    background: #EAF3FD;
+}
+.trending{
+    font-size: 16px;
+    color: #fafafa;
+    border-radius: 25px;
+}
+.hot{
+    font-size: 12px;
+    border-radius: 3px;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    z-index: 2;
+}
+.img-holder{
+    position: relative;
+}
+.project-card{
+    overflow-y: scroll;
 }

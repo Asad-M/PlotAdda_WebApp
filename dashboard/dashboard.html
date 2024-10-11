@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="../css/home.css" rel="stylesheet">
     <link href="../CSS/app.css" rel="stylesheet">
-    <link href="../CSS/stylesv.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
@@ -27,7 +26,12 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="../css/login.css">
-  <script src="./main.js"></script>
+  <script src="../main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -83,7 +87,7 @@
 
       <div class="col-3 col-lg-5 main">
         <div class="d-none d-lg-flex menu ">
-          <div class="menu2 menu-1">
+          <div class="menu2 menu-1 p-2">
             <a href="../find-agent.html">
               Agent
             </a>
@@ -98,25 +102,47 @@
               Map
             </a>
           </div> -->
-          <div class="menu-btn">
+          <div class="menu-btn" id="login_box">
             <a >
               <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
             </a>
           </div>
-          <div class="menu-btn">
+          <div class="dropdown mx-2" id="profile_box">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+              <strong>User Name</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+              <li><a class="dropdown-item" href="./dashboard.html">My Account</a></li>
+              <li><a class="dropdown-item" href="./user_setting.html">Setting</a></li>
+              <li><a class="dropdown-item" href="#" onclick="sign_out()">Sign out</a></li>
+            </ul>
+          </div>
+          <!-- <div class="menu-btn">
             <a >
               <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter-signup">SignUp</button>
             </a>
-          </div>
+          </div> -->
         </div>
 
 
         <!-- for mobile view -->
         <div class="d-flex d-lg-none  menu ">
-          <div class="menu-btn">
+          <div class="menu-btn"  id="login_box1">
             <a>
-              <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter-signup">SignUp</button>
+              <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
             </a>
+          </div>
+          <div class="dropdown m-2" id="profile_box1">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2"> -->
+              <strong>Name</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+              <li><a class="dropdown-item" href="./dashboard/dashboard.html">My Account</a></li>
+              <li><a class="dropdown-item" href="./dashboard/user_setting.html">Setting</a></li>
+              <li><a class="dropdown-item" href="#" onclick="sign_out()">Sign out</a></li>
+            </ul>
           </div>
         </div>
         <!-- for mobile view -->
@@ -185,17 +211,17 @@
             <div class="menu">
               <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link active text-dark" href="#">Sign in</a>
+                  <a class="nav-link  active text-dark" onclick="checkModel('login')" id="login-link"  >Log in</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark" data-toggle="modal" data-target="#exampleModalCenter-signup">New account</a>
+                  <a class="nav-link text-dark" data-toggle="modal" onclick="checkModel('register')" id="register-link">Register</a>
                 </li>
               </ul>
               <hr>
             </div>
           </div>
           <div class="modal-body p-4">
-            <form action="" name="login_form">
+            <form action="" name="login_form" id="loginForm" >
               <div class="py-2">
                 <div class="label">
                   <label for=""><b> Email </b> </label>
@@ -213,46 +239,7 @@
                 <a class="text-primary" href=""> <h6 class="forget" > <b>Forget your Password?</b></h6>  </a>
               </div>
             </form>
-          </div>
-          <hr>
-          <div class="social_link text-center p-4">
-            <h6 class="d-block">Or Connect With:</h6>
-            
-            <!-- <div class="g-signin2 w-100" data-onsuccess="onSignIn"></div> -->
-            <!-- <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
-
-            <button class="btn btn-outline-primary w-100 my-2"  data-onsuccess="onSignIn">
-              <img class="s-logo-img col-4" src="../assets/google-logo-removebg-preview.png" alt="">
-              <span class="col-8 ">
-                Continue with Google
-              </span>
-            </button>
-            <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="../assets/facebook-logo-removebg-preview.png" alt="">
-              Continue with Facebook
-            </button>
-            <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="../assets/apple-logo.png" alt="">
-              Continue with Apple
-            </button>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Login Modal -->
-
-
-    <!-- Sign-up Modal -->
-    <div class=" modal fade" id="exampleModalCenter-signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle-signup" aria-hidden="true">
-      <div class="  modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content login-modal">
-          <div class=" text-center ">
-            <h4 class="modal-title text-center" id="exampleModalLongTitle">Welcome to PlotsAdda</h4>
-          </div>
-          <div class="modal-body p-4">
-            <form action="">
+            <form action="" id="registerForm">
               <div class="py-2">
                 <div class="label">
                   <label for=""><b> Email </b> </label>
@@ -440,23 +427,28 @@
                   <input type="text" class="w-100 p-1" placeholder="92-0000000000" >
                 </div>
               </div>
-            </div>
             
             <div class="submit text-center px-4">
               <button class="btn btn-success w-100 my-2">Sign up</button>
               <p>
                 By submitting, I accept PlotsAdda's 
-                <a class="text-primary" href="../term-of-use.html"> <b>terms of use.</b></a>
+                <a class="text-primary" href="./term-of-use.html"> <b>terms of use.</b></a>
               </p>
             </div>
           </form>
+          </div>
           <hr>
           <div class="social_link text-center p-4">
             <h6 class="d-block">Or Connect With:</h6>
-            <button class="btn btn-outline-primary w-100 my-2">
+            
+            <!-- <div class="g-signin2 w-100" data-onsuccess="onSignIn"></div> -->
+            <!-- <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+
+            <button class="btn btn-outline-primary w-100 my-2"  data-onsuccess="onSignIn">
               <img class="s-logo-img" src="../assets/google-logo-removebg-preview.png" alt="">
+              <span class="col-8 ">
                 Continue with Google
-      
+              </span>
             </button>
             <button class="btn btn-outline-primary w-100 my-2">
               <img class="s-logo-img" src="../assets/facebook-logo-removebg-preview.png" alt="">
@@ -466,15 +458,16 @@
               <img class="s-logo-img" src="../assets/apple-logo.png" alt="">
               Continue with Apple
             </button>
+
+
           </div>
-        </div>
-        
-      </div>
-        
         </div>
       </div>
     </div>
-    <!-- Sign-up Modal -->
+    <!-- Login Modal -->
+    <!-- <div class="site-name ">
+      <h1 class="text-center">  P L O T S A D D A </h1>
+    </div> -->
   </header>
       <section class="d-flex main-section my-2">
         <div class="d-flex sidebar flex-column flex-shrink-0 p-3 text-white  col-2" style=" height: 92vh;">
@@ -518,19 +511,24 @@
             </li>
           </ul>
           <hr>
-          <div class="dropdown">
-            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-              <strong>User</strong>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
-            </ul>
-          </div>
+         
         </div>
         <div id="dashboard" class="dashboard col-10" style=" height: 92vh; overflow: scroll;">
          <div class="container">
-            <h1 class=" p-4">Welcome User</h1>
+          <div class="d-flex">
+            <div class="col-6">
+              <h1 class=" p-4 ">Welcome User</h1>
+            </div>
+            <div class="col-6 d-flex my-4">
+              <div class="w-50 input-group">
+                <input type="text " class="form-control w-75 my-2">
+                <label for="" class="input-group-text my-2 bg-primary text-light">Search</label>
+              </div>
+              <a class="btn btn-primary w-25 m-2" href="./listing.html">Property Listing</a>
+
+            </div>
+          </div>
+
           <div class="col-12">
             <div class="show-property">
               <div class=" px-4 w-75" >

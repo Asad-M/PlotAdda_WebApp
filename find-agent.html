@@ -16,7 +16,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="css/home.css" rel="stylesheet">
   <link href="CSS/app.css" rel="stylesheet">
-  <link href="CSS/stylesv.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/app.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -25,6 +24,7 @@
    <link rel="stylesheet" href="./css/login.css">
   <script src="./main.js"></script>
     <title>Agents</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -80,7 +80,7 @@
 
       <div class="col-3 col-lg-5 main">
         <div class="d-none d-lg-flex menu ">
-          <div class="menu2 menu-1">
+          <div class="menu2 menu-1 p-2">
             <a href="./find-agent.html">
               Agent
             </a>
@@ -95,25 +95,47 @@
               Map
             </a>
           </div> -->
-          <div class="menu-btn">
+          <div class="menu-btn" id="login_box">
             <a >
               <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
             </a>
           </div>
-          <div class="menu-btn">
-            <a >
-              <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter-agent">SignUp</button>
+          <div class="dropdown mx-2" id="profile_box">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+              <strong>User Name</strong>
             </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+              <li><a class="dropdown-item" href="./dashboard/dashboard.html">My Account</a></li>
+              <li><a class="dropdown-item" href="./dashboard/user_setting.html">Setting</a></li>
+              <li><a class="dropdown-item" href="#" onclick="sign_out()">Sign out</a></li>
+            </ul>
           </div>
+          <!-- <div class="menu-btn">
+            <a >
+              <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter-signup">SignUp</button>
+            </a>
+          </div> -->
         </div>
 
 
         <!-- for mobile view -->
         <div class="d-flex d-lg-none  menu ">
-          <div class="menu-btn">
+          <div class="menu-btn"  id="login_box1">
             <a>
-              <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">SignUp</button>
+              <button class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
             </a>
+          </div>
+          <div class="dropdown m-2" id="profile_box1">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2"> -->
+              <strong>Name</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+              <li><a class="dropdown-item" href="./dashboard/dashboard.html">My Account</a></li>
+              <li><a class="dropdown-item" href="./dashboard/user_setting.html">Setting</a></li>
+              <li><a class="dropdown-item" href="#" onclick="sign_out()">Sign out</a></li>
+            </ul>
           </div>
         </div>
         <!-- for mobile view -->
@@ -182,17 +204,17 @@
             <div class="menu">
               <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link active text-dark" href="#">Sign in</a>
+                  <a class="nav-link  active text-dark" onclick="checkModel('agent-login')" id="login-link"  >Log in</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-dark" data-toggle="modal" data-target="#exampleModalCenter-signup">New account</a>
+                  <a class="nav-link text-dark" data-toggle="modal" onclick="checkModel('agent')" id="agent-register-link">Register</a>
                 </li>
               </ul>
               <hr>
             </div>
           </div>
           <div class="modal-body p-4">
-            <form action="" name="login_form">
+            <form action="" name="login_form" id="loginForm" >
               <div class="py-2">
                 <div class="label">
                   <label for=""><b> Email </b> </label>
@@ -210,46 +232,7 @@
                 <a class="text-primary" href=""> <h6 class="forget" > <b>Forget your Password?</b></h6>  </a>
               </div>
             </form>
-          </div>
-          <hr>
-          <div class="social_link text-center p-4">
-            <h6 class="d-block">Or Connect With:</h6>
-            
-            <!-- <div class="g-signin2 w-100" data-onsuccess="onSignIn"></div> -->
-            <!-- <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
-
-            <button class="btn btn-outline-primary w-100 my-2"  data-onsuccess="onSignIn">
-              <img class="s-logo-img col-4" src="./assets/google-logo-removebg-preview.png" alt="">
-              <span class="col-8 ">
-                Continue with Google
-              </span>
-            </button>
-            <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/facebook-logo-removebg-preview.png" alt="">
-              Continue with Facebook
-            </button>
-            <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/apple-logo.png" alt="">
-              Continue with Apple
-            </button>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Login Modal -->
-
-
-    <!-- Sign-up Modal -->
-    <div class=" modal fade" id="exampleModalCenter-signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle-signup" aria-hidden="true">
-      <div class="  modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content login-modal">
-          <div class=" text-center ">
-            <h4 class="modal-title text-center" id="exampleModalLongTitle">Welcome to PlotsAdda</h4>
-          </div>
-          <div class="modal-body p-4">
-            <form action="">
+            <form action="" id="agent_form">
               <div class="py-2">
                 <div class="label">
                   <label for=""><b> Email </b> </label>
@@ -263,47 +246,15 @@
                 <input type="password" class="w-100 p-1" placeholder="Enter Password" >
               </div>
               <div class="py-2">
-                <div class="label">
-                  <input type="checkbox" id="landload" class="p-1" onchange="show_signup_option()">
-                  <label for="landload"><b>I am a landlord or industry Professional</b></label>
+                <div class="label" >
+                  <input type="checkbox" id="landload" class="p-1" onchange="show_agent_option()">
+                  <label for="landload"><b>I am an Agent</b></label>
                 </div>
               </div>
-              <div id="landload_opt" class="landload">
+              <div class="landload 0" id="agent_opt">
                 <div>
-                  <h4>Professional Information</h4>
-                </div>
-                <div class="d-flex">
-                  <div class="p-2">
-                    <div class="label">
-                      <label for=""><b>First Name</b></label>
-                    </div>
-                    <input type="text" class="w-100 p-1" placeholder="First name" >
-                  </div>
-                  <div class="p-2">
-                    <div class="label">
-                      <label for=""><b>Last Name</b></label>
-                    </div>
-                    <input type="text" class="w-100 p-1" placeholder="Last name" >
-                  </div>
-                </div>
-                <div class="py-2">
-                  <div class="label">
-                    <label for=""><b>Professional type</b></label>
-                  </div>
-                  <select  class="py-2 w-100">
-                    <option value="0">Select your category</option>
-                    <option value="2">Mortgage Lender</option>
-                    <option value="3">Home Improvement Services</option>
-                    <option value="5">Landlord</option>
-                    <option value="6">Photographer</option>
-                    <option value="7">Home Builder</option>
-                    <option value="8">Home Inspector</option>
-                    <option value="9">Property Manager</option>
-                    <option value="11">Other Real Estate Professional</option>
-                  </select>
-                  
-                </div>
-      
+                  <h4>Agency Information</h4>
+                </div>   
                 
                 <div class="py-2">
                   <div class="label">
@@ -432,12 +383,30 @@
                 </div>
                 <div class="py-2">
                   <div class="label">
-                    <label for=""><b>Phone number</b></label>
+                    <label for=""><b>Agency Name</b></label>
                   </div>
-                  <input type="text" class="w-100 p-1" placeholder="92-0000000000" >
+                  <input type="text" class="w-100 p-1" placeholder="Enter your Agency Name" >
+                </div>
+                <div class="py-2">
+                  <div class="label">
+                    <label for=""><b>Company Email</b></label>
+                  </div>
+                  <input type="email" class="w-100 p-1" placeholder="Enter your Company Email" >
+                </div>
+                <div class="py-2">
+                  <div class="label">
+                    <label for=""><b>Agency Address</b></label>
+                  </div>
+                  <input type="text" class="w-100 p-1" placeholder="Enter your Company Address" >
+                </div>
+                <div class="py-2">
+                  <div class="label">
+                    <label for=""><b>Upload Company LOGO</b></label>
+                  </div>
+                  <input type="file" class="w-100 p-1" placeholder="Upload Company logo" >
                 </div>
               </div>
-            </div>
+            
             
             <div class="submit text-center px-4">
               <button class="btn btn-success w-100 my-2">Sign up</button>
@@ -447,13 +416,19 @@
               </p>
             </div>
           </form>
+          </div>
           <hr>
           <div class="social_link text-center p-4">
             <h6 class="d-block">Or Connect With:</h6>
-            <button class="btn btn-outline-primary w-100 my-2">
+            
+            <!-- <div class="g-signin2 w-100" data-onsuccess="onSignIn"></div> -->
+            <!-- <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
+
+            <button class="btn btn-outline-primary w-100 my-2"  data-onsuccess="onSignIn">
               <img class="s-logo-img" src="./assets/google-logo-removebg-preview.png" alt="">
+              <span class="col-8 ">
                 Continue with Google
-      
+              </span>
             </button>
             <button class="btn btn-outline-primary w-100 my-2">
               <img class="s-logo-img" src="./assets/facebook-logo-removebg-preview.png" alt="">
@@ -463,22 +438,16 @@
               <img class="s-logo-img" src="./assets/apple-logo.png" alt="">
               Continue with Apple
             </button>
+
+
           </div>
         </div>
-        
-      </div>
-        
-        </div>
       </div>
     </div>
-    <!-- Sign-up Modal -->
-
-
-
-
-    <div class="site-name ">
+    <!-- Login Modal -->
+    <!-- <div class="site-name ">
       <h1 class="text-center">  P L O T S A D D A </h1>
-    </div>
+    </div> -->
   </header>
       <div class="banner text-center">
         <!-- <h1>Term of Use</h1>  -->
@@ -512,7 +481,7 @@
       </div> -->
     </div>
     <div class="modal-body p-4">
-      <form action="">
+      <form action="" id="agent_form">
         <div class="py-2">
           <div class="label">
             <label for=""><b> Email </b> </label>

@@ -1,24 +1,24 @@
 var isadmin = true;
-userCheck();
+// userCheck();
 
 
-function userCheck(){
-    if(isadmin == true){
-        document.getElementsByClassName('blog-posting').style.display='none';
-        console.log('login check')
-    }
+// function userCheck(){
+//     if(isadmin == true){
+//         document.getElementsByClassName('blog-posting').style.display='none';
+//         console.log('login check')
+//     }
+// }
+function addVideo(){
+    document.getElementById('add_video').style.display='block';
+    // document.getElementById('add-video-btn').style.display='none'
 }
-function addVideo()
-{
-    console.log("1st")
-    var element = document.createElement("div");
-    console.log("2st")
-    // element.appendChild(document.createTextNode('<div class="d-flex"><img class="youtube-icon m-2" src="../assets/youtube-logo-removebg-preview.png" alt=""><input type="text" class="p-2 w-100" placeholder="Add your video link here"></div>'));
-    console.log("3st",document.getElementbyId('add_video').appendChild(element))
-    debugger
-    document.getElementbyId('add_video').appendChild(element);
-    console.log("4st")
+var install_check_var = false;
+function install_check(){
+    install_check_var = !install_check_var;
+    if(install_check_var==true){
+       return document.getElementById("installment_box").style.display="block";
+    }else if(install_check_var == false){
+       return  document.getElementById("installment_box").style.display="none";
+    }
 
-    
-    //document.body.appendChild(element);
 }

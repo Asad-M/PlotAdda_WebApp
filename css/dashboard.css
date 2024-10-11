@@ -68,4 +68,12 @@
 .w-35{
     width: 35%;
 }
-
+#add_video{
+    display: none;
+}
+.listing_submit{
+    margin:10px 10px 10px 60vw;
+}
+#installment_box{
+    display: none;
+}
