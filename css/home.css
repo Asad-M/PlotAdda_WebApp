@@ -138,9 +138,34 @@ a {
     position: absolute;
     z-index: 2;
 }
-.img-holder{
-    position: relative;
+
+.card-item{
+    width: 30%;
 }
-.project-card{
+
+/* @media only screen and (min-width: 600px) and (max-width:1024px) {
+
+    .search{
+        padding-top: 8vh;
+        height: 50vh;
+
+    }
+} */
+@media only screen and (max-width: 600px) {
+
+    .search{
+        padding-top: 3vh;
+        height: 50vh;
+        background-image: url('../assets/responsive-home-page.jpg');
+    }
+}
+
+
+
+/* .img-holder{ */
+    /* position: relative; */
+/* } */
+/* .project-card{
     overflow-y: scroll;
-}
+    position: relative;
+} */

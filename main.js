@@ -41,7 +41,6 @@ function checkModel(data){
      if(check == 'login'){
           document.getElementById('loginForm').style.display='block';
           document.getElementById('registerForm').style.display='none';
-          document.getElementById('agent_form').style.display='none';
           document.getElementById('login-link').style.background='#57b76f';
           document.getElementById('register-link').style.background='#fafafa';
           
@@ -69,6 +68,7 @@ function sign_out(){
      document.getElementById('login_box').style.display="block";
      document.getElementById('login_box1').style.display="block";
 }
+
 
 
 
