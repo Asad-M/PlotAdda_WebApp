@@ -713,9 +713,20 @@
         <script>
           new Swiper('.card-wrapper', {
             // Navigation arrows
+            direction: 'vertical',
+            loop: true,
+
+            pagination: {
+            el: '.swiper-pagination',
+            },
+
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+            el: '.swiper-scrollbar',
             },
             breakpoints:{
               0:{
@@ -727,6 +738,9 @@
               1024:{
                 slidesPerView: 3
               },
+              2048:{
+                slidesPerView: 3
+              },
             }
           });
         </script>
@@ -735,7 +749,7 @@
             <div class="card-wrapper">
               <ul class="swiper-wrapper card-list">
                 <li class="swiper-slide card-item">
-                  <div class="card col-3 mx-2">
+                  <div class="card mx-2">
                     <div class="img-holder">
                       <span class="px-2 bg-danger text-light hot">HOT</span>
                       <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">

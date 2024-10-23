@@ -31,7 +31,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
 src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-
+<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   
     <script src="../main.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -543,12 +543,14 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                               <div class="label">
                                 <label for=""><b>I want to</b></label>
                               </div>
-                              <div class="px-0 px-md-2 px-lg-2">
-                                <div>                          
-                                <input type="radio" name="whoAreU" id="buy">
-                                <label for="buy" class="p-1">Buy</label>
-                                  <input type="radio" name="whoAreU" id="rent">
-                                  <label for="rent" class="p-1">Rent</label>
+                              <div class="px-0 px-md-2 px-lg-2" >
+                                <div class="form-check">                          
+                                  <input type="radio" name="whoAreU" id="buy" class="form-check-input">
+                                  <label for="buy" class="form-check-label" >Buy</label>
+                                </div>
+                                <div class="form-check"> 
+                                  <input type="radio" name="whoAreU" id="rent" class="form-check-input">
+                                  <label for="rent" class="form-check-label" >Rent</label>
                                 </div>
                               </div>
                             </div>
@@ -565,31 +567,31 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                                   </h2>
                                   <div id="flush-collapseOne" class="accordion-collapse collapse" data-parent="#accordionFlushExample">
                                     <div>
-                                        <input type="radio" name="homefilter" id="house" onchange="home_opt()">
+                                        <input type="radio" name="homefilter" id="house" class="form-check-input" onchange="home_opt()">
                                         <label for="house" class="p-1">House</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="Flat" onchange="home_opt()">
+                                        <input type="radio" name="homefilter" id="Flat" class="form-check-input" onchange="home_opt()">
                                         <label for="Flat" class="p-1">Flat</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="UpperPortion" onchange="home_opt()">
+                                        <input type="radio" name="homefilter" id="UpperPortion" class="form-check-input" onchange="home_opt()">
                                         <label for="UpperPortion" class="p-1">Upper Portion</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="LowerPortion" onchange="home_opt()">
+                                        <input type="radio" name="homefilter" id="LowerPortion" class="form-check-input" onchange="home_opt()">
                                         <label for="LowerPortion" class="p-1">Lower Portion</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="FarmHouse" onchange="home_opt()">
+                                        <input type="radio" name="homefilter" id="FarmHouse" class="form-check-input" onchange="home_opt()">
                                         <label for="FarmHouse" class="p-1">Farm House</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="room" onchange="home_opt()">
+                                        <input type="radio" name="homefilter" id="room" class="form-check-input" onchange="home_opt()">
                                         <label for="room" class="p-1">Room</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="Penthouse" onchange="home_opt()">
+                                        <input type="radio" name="homefilter" id="Penthouse" class="form-check-input" onchange="home_opt()">
                                         <label for="Penthouse" class="p-1">Penthouse</label>
                                       </div>
                                   </div>
@@ -602,27 +604,27 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                                   </h2>
                                   <div id="flush-collapseTwo" class="accordion-collapse collapse" data-parent="#accordionFlushExample">
                                      <div>
-                                        <input type="radio" name="homefilter" id="RP">
+                                        <input type="radio" name="homefilter" id="RP" class="form-check-input">
                                         <label for="RP" class="p-1">Residential Plot</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="CP">
+                                        <input type="radio" name="homefilter" id="CP" class="form-check-input">
                                         <label for="CP" class="p-1">Commercial Plot</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="AgriculturalLand">
+                                        <input type="radio" name="homefilter" id="AgriculturalLand" class="form-check-input">
                                         <label for="AgriculturalLand" class="p-1">Agricultural Land</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="IndustrialLand">
+                                        <input type="radio" name="homefilter" id="IndustrialLand" class="form-check-input">
                                         <label for="IndustrialLand" class="p-1">Industrial Land</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="PlotFile">
+                                        <input type="radio" name="homefilter" id="PlotFile" class="form-check-input">
                                         <label for="PlotFile" class="p-1">Plot File</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="PlotForm">
+                                        <input type="radio" name="homefilter" id="PlotForm" class="form-check-input">
                                         <label for="PlotForm" class="p-1">Plot Form</label>
                                       </div>  
                                   </div>
@@ -635,27 +637,27 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                                   </h2>
                                   <div id="flush-collapseThree" class="accordion-collapse collapse" data-parent="#accordionFlushExample">
                                    <div>
-                                        <input type="radio" name="homefilter" id="Office">
+                                        <input type="radio" name="homefilter" id="Office" class="form-check-input">
                                         <label for="Office" class="p-1">Office</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="Shop">
+                                        <input type="radio" name="homefilter" id="Shop" class="form-check-input">
                                         <label for="Shop" class="p-1">Shop</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="Warehouse">
+                                        <input type="radio" name="homefilter" id="Warehouse" class="form-check-input">
                                         <label for="Warehouse" class="p-1">Warehouse</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="Factory">
+                                        <input type="radio" name="homefilter" id="Factory" class="form-check-input">
                                         <label for="Factory" class="p-1">Factory</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="Building">
+                                        <input type="radio" name="homefilter" id="Building" class="form-check-input">
                                         <label for="Building" class="p-1">Building</label>
                                       </div>
                                       <div>
-                                        <input type="radio" name="homefilter" id="Other">
+                                        <input type="radio" name="homefilter" id="Other" class="form-check-input">
                                         <label for="Other" class="p-1">Other</label>
                                       </div>
                                   </div>
@@ -667,7 +669,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                               <div class="col-12 px-4">
                                 <div><label for="">City</label></div>
                                 <div>
-                                    <select class="p-2 w-75">
+                                    <select class="p-2 w-75 form-control">
                                         <option value="">--Select--</option>
                                          <option value="	Abbottabad	">	Abbottabad	</option>
                                         <option value="	Attock	">	Attock	</option>
@@ -793,7 +795,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                             <div class="d-flex ">
                                 <div class="col-12 p-4">
                                     <div><label for="">Address</label></div>
-                                    <div><input type="text"  class="w-75 p-2"></div>
+                                    <div><input type="text"  class="w-75 p-2 form-control" ></div>
                                 </div>
                             </div>
                            
@@ -817,9 +819,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                               <div class="col-12 px-4 py-2">
                                   <div><label for="">Area</label></div>
                                   <div class="d-flex">
-                                    <input type="number"  class="w-55 p-2">
+                                    <input type="number"  class="w-55 p-2 form-control" >
                                     <div class="area-unit  w-20 ">
-                                      <select  class="mx-2 w-100  p-2" name="" id="">
+                                      <select  class="mx-2 w-100  p-2 form-control" name="" id="">
                                         <option value="">Sq. Ft.</option>
                                         <option value="">Marla</option>
                                         <option value="">Kanal</option>
@@ -831,7 +833,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                           <div class="d-flex ">
                             <div class="col-12 px-4 py-2">
                                 <div><label for="">Price</label></div>
-                                <div><input type="text"  class="w-75 p-2"></div>
+                                <div><input type="text"  class="w-75 p-2 form-control"></div>
                             </div>
                         </div>
                         <div class="">
@@ -839,7 +841,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                               <div class="w-75"><label for="" >Installment Available</label></div>
                               <div>
                                 <div class="custom-control custom-switch mx-4">
-                                  <input type="checkbox" class="custom-control-input" id="customSwitches" onchange="install_check()">
+                                  <input type="checkbox" class="custom-control-input " id="customSwitches" onchange="install_check()">
                                   <label class="custom-control-label " for="customSwitches"></label>
                                 </div>
                               </div>
@@ -848,19 +850,19 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                             <div class="d-flex ">
                               <div class="col-12 px-4 py-2">
                                   <div><label for="">Advance Amount:</label></div>
-                                  <div><input type="number"  class="w-75 p-2"></div>
+                                  <div><input type="number"  class="w-75 p-2 form-control"></div>
                               </div>
                           </div>
                           <div class="d-flex ">
                             <div class="col-12 px-4 py-2">
                                 <div><label for="">No. of Installments</label></div>
-                                <div><input type="number"  class="w-75 p-2"></div>
+                                <div><input type="number"  class="w-75 p-2 form-control"></div>
                             </div>
                         </div>
                         <div class="d-flex ">
                           <div class="col-12 px-4 py-2">
                               <div><label for="">Monthly Installment</label></div>
-                              <div><input type="number"  class="w-75 p-2"></div>
+                              <div><input type="number"  class="w-75 p-2 form-control"></div>
                           </div>
                       </div>
                           </div>
@@ -883,78 +885,78 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                           <div class="py-2">
                             <label for=""><b> Bed Rooms</b></label>
                             <div class="label no_of_rooms">
-                              <div>
-                                <input type="radio" name="roomNo" id="r1">
-                                <label for="r1" class="p-1">1 Room</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" class="form-check-input" id="r1">
+                                <label for="r1" class="form-check-label">1 Room</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r2">
-                                <label for="r2" class="p-1">2 Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" class="form-check-input" id="r2">
+                                <label for="r2" class="form-check-label">2 Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r3">
-                                <label for="r3" class="p-1">3 Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" class="form-check-input" id="r3">
+                                <label for="r3" class="form-check-label">3 Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r4">
-                                <label for="r4" class="p-1">4 Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" class="form-check-input" id="r4">
+                                <label for="r4" class="form-check-label">4 Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r5">
-                                <label for="r5" class="p-1">5 Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" class="form-check-input" id="r5">
+                                <label for="r5" class="form-check-label">5 Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r6">
-                                <label for="r6" class="p-1">6 Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" id="r6" class="form-check-input">
+                                <label for="r6" class="form-check-label">6 Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r7">
-                                <label for="r7" class="p-1">7 Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" id="r7" class="form-check-input">
+                                <label for="r7" class="form-check-label">7 Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r8">
-                                <label for="r8" class="p-1">8 Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" id="r8" class="form-check-input">
+                                <label for="r8" class="form-check-label">8 Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r9">
-                                <label for="r9" class="p-1">9 Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" id="r9" class="form-check-input">
+                                <label for="r9" class="form-check-label">9 Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r10">
-                                <label for="r10" class="p-1">10 Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" id="r10" class="form-check-input">
+                                <label for="r10" class="form-check-label">10 Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="roomNo" id="r10+">
-                                <label for="r10+" class="p-1">10+ Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="roomNo" id="r10+" class="form-check-input">
+                                <label for="r10+" class="form-check-label">10+ Rooms</label>
                               </div>
                             </div>
                           </div>
                           <div class="py-2">
                             <label for=""><b> Bath Rooms</b></label>
                             <div class="label no_of_bath">
-                              <div>
-                                <input type="radio" name="broomNo" id="br1">
-                                <label for="br1" class="p-1">1 Bath Room</label>
+                              <div class="form-check"class="form-check">
+                                <input type="radio" name="broomNo" id="br1" class="form-check-input">
+                                <label for="br1" class="form-check-label">1 Bath Room</label>
                               </div>
-                              <div>
-                                <input type="radio" name="broomNo" id="br2">
-                                <label for="br2" class="p-1">2 Bath Rooms</label>
+                              <div class="form-check"> 
+                                <input type="radio" name="broomNo" id="br2" class="form-check-input">
+                                <label for="br2" class="form-check-label">2 Bath Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="broomNo" id="br3">
-                                <label for="br3" class="p-1">3 Bath Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="broomNo" id="br3" class="form-check-input">
+                                <label for="br3" class="form-check-label">3 Bath Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="broomNo" id="br4">
-                                <label for="br4" class="p-1">4 Bath Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="broomNo" id="br4" class="form-check-input">
+                                <label for="br4" class="form-check-label">4 Bath Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="broomNo" id="br5">
-                                <label for="br5" class="p-1">5 Bath Rooms</label>
+                              <div class="form-check">
+                                <input type="radio" name="broomNo" id="br5" class="form-check-input">
+                                <label for="br5" class="form-check-label">5 Bath Rooms</label>
                               </div>
-                              <div>
-                                <input type="radio" name="broomNo" id="br5+">
-                                <label for="br5+" class="p-1">5+ Bath Rooms</label>
+                              <div class="form-check"class="form-check"class="form-check"cl>
+                                <input type="radio" name="broomNo" id="br5+" class="form-check-input">
+                                <label for="br5+" class="form-check-label">5+ Bath Rooms</label>
                               </div>
                             </div>
                           </div>
@@ -976,14 +978,14 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                               <div class="col-12 px-4 py-2">
                                   <div><label for="">Title</label></div>
                                   <div class="d-flex">
-                                    <input type="text"  class="w-75 p-2">
+                                    <input type="text"  class="w-75 p-2 form-control">
                                   </div>
                               </div>
                           </div>
                           <div class="d-flex ">
                             <div class="col-12 px-4 py-2">
                                 <div><label for="">Description</label></div>
-                                <div><textarea name="" class="w-75 p-2" ></textarea></div>
+                                <div><textarea name="" class="w-75 p-2 form-control" ></textarea></div>
                             </div>
                         </div>
                         </div>
@@ -1019,7 +1021,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                                     <div class="w-75 video-link">
                                       <div class="d-flex">
                                         <img class="youtube-icon m-2" src="../assets/youtube-logo-removebg-preview.png" alt="">
-                                        <input type="text" class="p-2 w-100" placeholder="Add your video link here">
+                                        <input type="text" class="p-2 w-100 " placeholder="Add your video link here">
                                       </div>                                      
                                     </div>
                                     <div class="w-75 video-link my-3" id="add_video">
@@ -1052,8 +1054,8 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                           <div class="d-flex ">
                               <div class="col-12 px-4 py-2">
                                   <div><label for="">Email</label></div>
-                                  <div class="d-flex">
-                                    <input type="email"  class="w-75 p-2">
+                                  <div class="d-flex"> 
+                                    <input type="email"  class="w-75 p-2 form-control" >
                                   </div>
                               </div>
                           </div>
@@ -1061,7 +1063,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                             <div class="col-12 px-4 py-2">
                                 <div><label for="">Phone</label></div>
                                 <div class="d-flex">
-                                  <input type="number"  class="w-75 p-2">
+                                  <input type="number"  class="w-75 p-2 form-control">
                                 </div>
                             </div>
                         </div>
@@ -1069,7 +1071,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
                           <div class="col-12 px-4 py-2">
                               <div><label for="">Landline</label></div>
                               <div class="d-flex">
-                                <input type="number"  class="w-75 p-2">
+                                <input type="number"  class="w-75 p-2 form-control">
                               </div>
                           </div>
                       </div>
