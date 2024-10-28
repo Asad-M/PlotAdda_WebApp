@@ -169,3 +169,22 @@ a {
     overflow-y: scroll;
     position: relative;
 } */
+
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+  .city_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .city_container .item{
+    padding: 10px 0;
+  }
+  .city_container .item:hover{
+    cursor: pointer;
+  }
+  .city_arrow{
+    width: 18px;
+    rotate:45deg;
+  }

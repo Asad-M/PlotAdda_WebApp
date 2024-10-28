@@ -10,7 +10,7 @@
 }
 .user .user-profile-pic{
     border-radius: 50%;
-    width: 70px;
+    width: 100%;
 }
 .form input{
     border-radius: 10px;
