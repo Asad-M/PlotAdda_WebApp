@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon"  href="./assets/logo-design.png">
   <link href="css/home.css" rel="stylesheet">
-  <link href="css/app.css" rel="stylesheet">
+  <link href="CSS/app.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="./css/login.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -18,12 +18,19 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="./main.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
- 
+  
+
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
   <header>
@@ -195,274 +202,106 @@
     <!-- for mobile menu box  -->
 
         <!-- Login Modal -->
-    <div class=" modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class=" modal-dialog modal-dialog-centered" role="document">
+    <div class=" modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+      <div class=" modal-dialog modal-dialog-centered"  role="document">
         <div class="modal-content login-modal">
-          <div class=" text-center ">
-            <div class="modal_head d-flex">
-              <div class="col-10">
-                <h4 class="modal-title text-center" id="exampleModalLongTitle">Welcome to PlotsAdda</h4>
-              </div>
-              <div class="col-1 m-1">
-                <button class="close_btn " data-dismiss="modal" aria-label="Close">
-                  <!-- <span aria-hidden="true">&times;</span>  -->
-                  <img  src="./assets/icons8-cross-30.png" alt="" >
-                </button>
-              </div>
-            </div>
-            <div class="menu">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link  active text-dark" onclick="checkModel('login')" id="login-link"  >Log in</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark" data-toggle="modal" onclick="checkModel('register')" id="register-link">Register</a>
-                </li>
-              </ul>
-              <hr>
-            </div>
-          </div>
-          <div class="modal-body p-4">
-            <form action="" name="login_form" id="loginForm" >
-              <div class="py-2">
-                <div class="label">
-                  <label for=""><b> Email </b> </label>
-                </div>
-                <input type="email" #email class="w-100 p-1" placeholder="Enter Email">
-              </div>
-              <div class="py-2">
-                <div class="label">
-                  <label for=""><b> Password </b></label>
-                </div>
-                <input type="password" #password class="w-100 p-1" placeholder="Enter Password" >
-              </div>
-              <div class="submit text-center">
-                <button class="btn btn-success w-100 my-2" >Sign in</button>
-                <a class="text-primary" href=""> <h6 class="forget" > <b>Forget your Password?</b></h6>  </a>
-              </div>
-            </form>
-            <form action="" id="registerForm">
-              <div class="py-2">
-                <div class="label">
-                  <label for=""><b> Email </b> </label>
-                </div>
-                <input type="email" class="w-100 p-1" placeholder="Enter Email">
-              </div>
-              <div class="py-2">
-                <div class="label">
-                  <label for=""><b>Create Password</b></label>
-                </div>
-                <input type="password" class="w-100 p-1" placeholder="Enter Password" >
-              </div>
-              <div class="py-2">
-                <div class="label">
-                  <input type="checkbox" id="landload" class="p-1" onchange="show_signup_option()">
-                  <label for="landload"><b>I am a landlord or industry Professional</b></label>
-                </div>
-              </div>
-              <div id="landload_opt" class="landload">
-                <div>
-                  <h4>Professional Information</h4>
-                </div>
-                <div class="d-flex">
-                  <div class="p-2">
-                    <div class="label">
-                      <label for=""><b>First Name</b></label>
-                    </div>
-                    <input type="text" class="w-100 p-1" placeholder="First name" >
-                  </div>
-                  <div class="p-2">
-                    <div class="label">
-                      <label for=""><b>Last Name</b></label>
-                    </div>
-                    <input type="text" class="w-100 p-1" placeholder="Last name" >
-                  </div>
-                </div>
-                <div class="py-2">
-                  <div class="label">
-                    <label for=""><b>Professional type</b></label>
-                  </div>
-                  <select  class="py-2 w-100">
-                    <option value="0">Select your category</option>
-                    <option value="2">Mortgage Lender</option>
-                    <option value="3">Home Improvement Services</option>
-                    <option value="5">Landlord</option>
-                    <option value="6">Photographer</option>
-                    <option value="7">Home Builder</option>
-                    <option value="8">Home Inspector</option>
-                    <option value="9">Property Manager</option>
-                    <option value="11">Other Real Estate Professional</option>
-                  </select>
-                  
-                </div>
-      
-                
-                <div class="py-2">
-                  <div class="label">
-                    <label for=""><b>City</b></label>
-                  </div>
-                    <select class="py-2 w-100">
-                      <option value="">--Select--</option>
-                       <option value="	Abbottabad	">	Abbottabad	</option>
-                      <option value="	Attock	">	Attock	</option>
-                       <option value="	Awaran	">	Awaran	</option>
-                       <option value="	Badin	">	Badin	</option>
-                       <option value="	Bagh	">	Bagh	</option>
-                       <option value="	Bahawalpur	">	Bahawalpur	</option>
-                       <option value="	Bannu	">	Bannu	</option>
-                       <option value="	Battagram	">	Battagram	</option>
-                       <option value="	Bhakkar	">	Bhakkar	</option>
-                       <option value="	Bhimber	">	Bhimber	</option>
-                       <option value="	Chakwal	">	Chakwal	</option>
-                       <option value="	Chaman	">	Chaman	</option>
-                       <option value="	Charsadda	">	Charsadda	</option>
-                       <option value="	Chiniot	">	Chiniot	</option>
-                       <option value="	Dadu	">	Dadu	</option>
-                       <option value="	Dera Ghazi Khan	">	Dera Ghazi Khan	</option>
-                       <option value="	Dera Ismail Khan	">	Dera Ismail Khan	</option>
-                       <option value="	Dera Murad Jamali	">	Dera Murad Jamali	</option>
-                       <option value="	Diamer (Chilas)	">	Diamer (Chilas)	</option>
-                       <option value="	Faisalabad	">	Faisalabad	</option>
-                       <option value="	Ghanche	">	Ghanche	</option>
-                       <option value="	Ghizer	">	Ghizer	</option>
-                       <option value="	Ghotki	">	Ghotki	</option>
-                       <option value="	Gilgit	">	Gilgit	</option>
-                       <option value="	Gujranwala	">	Gujranwala	</option>
-                       <option value="	Gujrat	">	Gujrat	</option>
-                       <option value="	Gwadar	">	Gwadar	</option>
-                       <option value="	Hafizabad	">	Hafizabad	</option>
-                       <option value="	Hangu	">	Hangu	</option>
-                       <option value="	Haripur	">	Haripur	</option>
-                       <option value="	Haveli	">	Haveli	</option>
-                       <option value="	Hub	">	Hub	</option>
-                       <option value="	Hunza	">	Hunza	</option>
-                       <option value="	Hyderabad	">	Hyderabad	</option>
-                       <option value="	Islamabad	">	Islamabad	</option>
-                       <option value="	Jacobabad	">	Jacobabad	</option>
-                       <option value="	Jaffarabad	">	Jaffarabad	</option>
-                       <option value="	Jamshoro	">	Jamshoro	</option>
-                       <option value="	Jhelum	">	Jhelum	</option>
-                       <option value="	Kalat	">	Kalat	</option>
-                       <option value="	Karachi	">	Karachi	</option>
-                       <option value="	Karak	">	Karak	</option>
-                       <option value="	Kashmore	">	Kashmore	</option>
-                       <option value="	Kasur	">	Kasur	</option>
-                       <option value="	Kech	">	Kech	</option>
-                       <option value="	Khairpur	">	Khairpur	</option>
-                       <option value="	Khanewal	">	Khanewal	</option>
-                       <option value="	Kharan	">	Kharan	</option>
-                       <option value="	Khushab	">	Khushab	</option>
-                       <option value="	Khuzdar	">	Khuzdar	</option>
-                       <option value="	Kohat	">	Kohat	</option>
-                       <option value="	Kohistan	">	Kohistan	</option>
-                       <option value="	Kotli	">	Kotli	</option>
-                       <option value="	Lahore	">	Lahore	</option>
-                       <option value="	Lakki Marwat	">	Lakki Marwat	</option>
-                       <option value="	Larkana	">	Larkana	</option>
-                       <option value="	Lasbela	">	Lasbela	</option>
-                       <option value="	Layyah	">	Layyah	</option>
-                       <option value="	Lodhran	">	Lodhran	</option>
-                       <option value="	Loralai	">	Loralai	</option>
-                       <option value="	Lower Dir (Timergara)	">	Lower Dir (Timergara)	</option>
-                       <option value="	Malakand	">	Malakand	</option>
-                       <option value="	Mansehra	">	Mansehra	</option>
-                       <option value="	Mardan	">	Mardan	</option>
-                       <option value="	Mastung	">	Mastung	</option>
-                       <option value="	Matiari	">	Matiari	</option>
-                       <option value="	Mianwali	">	Mianwali	</option>
-                       <option value="	Mirpur	">	Mirpur	</option>
-                       <option value="	Mirpur Khas	">	Mirpur Khas	</option>
-                       <option value="	Multan	">	Multan	</option>
-                       <option value="	Muzaffarabad	">	Muzaffarabad	</option>
-                       <option value="	Muzaffargarh	">	Muzaffargarh	</option>
-                       <option value="	Nagar	">	Nagar	</option>
-                       <option value="	Narowal	">	Narowal	</option>
-                       <option value="	Naseerabad	">	Naseerabad	</option>
-                       <option value="	Naushahro Feroze	">	Naushahro Feroze	</option>
-                       <option value="	Nawabshah (Shaheed Benazirabad)	">	Nawabshah (Shaheed Benazirabad)	</option>
-                       <option value="	Neelum	">	Neelum	</option>
-                       <option value="	Nowshera	">	Nowshera	</option>
-                       <option value="	Okara	">	Okara	</option>
-                       <option value="	Pakpattan	">	Pakpattan	</option>
-                       <option value="	Panjgur	">	Panjgur	</option>
-                       <option value="	Peshawar	">	Peshawar	</option>
-                       <option value="	Pishin	">	Pishin	</option>
-                       <option value="	Quetta	">	Quetta	</option>
-                       <option value="	Rahim Yar Khan	">	Rahim Yar Khan	</option>
-                       <option value="	Rajanpur	">	Rajanpur	</option>
-                       <option value="	Rawalakot	">	Rawalakot	</option>
-                       <option value="	Rawalpindi	">	Rawalpindi	</option>
-                       <option value="	Sahiwal	">	Sahiwal	</option>
-                       <option value="	Sanghar	">	Sanghar	</option>
-                       <option value="	Sargodha	">	Sargodha	</option>
-                       <option value="	Shangla	">	Shangla	</option>
-                       <option value="	Sheikhupura	">	Sheikhupura	</option>
-                       <option value="	Shigar	">	Shigar	</option>
-                       <option value="	Shikarpur	">	Shikarpur	</option>
-                       <option value="	Sialkot	">	Sialkot	</option>
-                       <option value="	Sibi	">	Sibi	</option>
-                       <option value="	Skardu	">	Skardu	</option>
-                       <option value="	Sudhanoti	">	Sudhanoti	</option>
-                       <option value="	Sukkur	">	Sukkur	</option>
-                       <option value="	Swabi	">	Swabi	</option>
-                       <option value="	Swat (Mingora)	">	Swat (Mingora)	</option>
-                       <option value="	Tando Allahyar	">	Tando Allahyar	</option>
-                       <option value="	Tando Muhammad Khan	">	Tando Muhammad Khan	</option>
-                       <option value="	Tank	">	Tank	</option>
-                       <option value="	Tharparkar	">	Tharparkar	</option>
-                       <option value="	Thatta	">	Thatta	</option>
-                       <option value="	Toba Tek Singh	">	Toba Tek Singh	</option>
-                       <option value="	Torghar	">	Torghar	</option>
-                       <option value="	Turbat	">	Turbat	</option>
-                       <option value="	Umerkot	">	Umerkot	</option>
-                       <option value="	Upper Dir	">	Upper Dir	</option>
-                       <option value="	Vehari	">	Vehari	</option>
-                       <option value="	Zhob	">	Zhob	</option>
-                       <option value="	Ziarat	">	Ziarat	</option>
-      
-                    </select>
-                </div>
-                <div class="py-2">
-                  <div class="label">
-                    <label for=""><b>Phone number</b></label>
-                  </div>
-                  <input type="text" class="w-100 p-1" placeholder="92-0000000000" >
-                </div>
-              </div>
-            
-            <div class="submit text-center px-4">
-              <button class="btn btn-success w-100 my-2">Sign up</button>
-              <p>
-                By submitting, I accept PlotsAdda's 
-                <a class="text-primary" href="./term-of-use.html"> <b>terms of use.</b></a>
-              </p>
-            </div>
-          </form>
-          </div>
-          <hr>
-          <div class="social_link text-center p-4">
-            <h6 class="d-block">Or Connect With:</h6>
-            
-            <!-- <div class="g-signin2 w-100" data-onsuccess="onSignIn"></div> -->
-            <!-- <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div> -->
 
-            <button class="btn btn-outline-primary w-100 my-2"  data-onsuccess="onSignIn">
-              <img class="s-logo-img" src="./assets/google-logo-removebg-preview.png" alt="">
-              <span class="col-8 ">
-                Continue with Google
-              </span>
-            </button>
-            <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/facebook-logo-removebg-preview.png" alt="">
-              Continue with Facebook
-            </button>
-            <button class="btn btn-outline-primary w-100 my-2">
-              <img class="s-logo-img" src="./assets/apple-logo.png" alt="">
-              Continue with Apple
-            </button>
+          <div class="mainClass">
+    <section class="wrapper  text-white rounded-3 shadow">
+      <div class="text-center">
+        <h4 class="modal-title">Welcome to PlotsAdda</h4>
+      </div>
 
-
+      <div class="form signup">
+        <header class="fs-4" >Signup</header>
+        <form class="mt-4">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Full name"
+              required
+            />
           </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email address"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck">I accept all terms & conditions</label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Signup</button>
+        </form>
+        <div class="form-link mt-3">
+          <span>Already have an account? <a href="#" class="text-decoration-none">Login</a></span>
+        </div>
+      </div>
+
+      <div class="auth text-center mt-3">
+        <p>Or login with</p>
+      </div>
+
+      <div class="d-flex justify-content-center gap-2">
+        <button class="btn btn-outline-light d-flex align-items-center gap-2">
+          <i class="fab fa-facebook"></i> <span>Facebook</span>
+        </button>
+        <button class="btn btn-outline-light d-flex align-items-center gap-2">
+          <i class="fab fa-google"></i> <span>Google</span>
+        </button>
+      </div>
+
+      <div class="form login mt-5">
+        <header class="fs-8 mt-3">Login</header>
+        <form class="mt-6 ">
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email address"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <a href="#" class="d-block mb-3">Forgot password?</a>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      const wrapper = document.querySelector(".wrapper"),
+        signupHeader = document.querySelector(".signup header"),
+        loginHeader = document.querySelector(".login header");
+
+      loginHeader.addEventListener("click", () => {
+        wrapper.classList.add("active");
+      });
+      signupHeader.addEventListener("click", () => {
+        wrapper.classList.remove("active");
+      });
+    </script>
+  </div>
+       
         </div>
       </div>
     </div>
@@ -500,192 +339,190 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <div class="search-wrapper d-block  position-absolute top-50 start-50 translate-middle text-center">
+
+      <div class="search-wrapper d-block position-absolute top-50 start-50 translate-middle text-center">
+ 
         <div class="search-heading">
           <h2 class="text-light text-center">
             Search properties for sale & buying in Pakistan
           </h2>
         </div>
         <div class="search-btn text-center">
-          <button type="button" class="btn btn-light mx-3 my-2"><a class="text-dark text-decoration-none search-btn-a" href="./buy.html"> BUY</a></button>
-          <button type="button" class="btn btn-outline-light mx-3 my-2"><a class="search-btn-a" href="./sell.html"> SELL</a></button>
+          <button type="button" class="btn btn-light mx-3 my-2">
+            <a class="text-dark" href="./buy.html" style="text-decoration: none;">BUY</a>
+          </button>
+                   <button type="button" class="btn btn-outline-light mx-3 my-2"><a class="search-btn-a" href="./sell.html"> SELL</a></button>
           <button type="button" class="btn btn-outline-light mx-3 my-2"> <a class="search-btn-a " href="./rent.html"> RENT</a></button>
         </div>
         <div class="search-bar-section  d-lg-flex d-none ">
-          <div class="col-3 m-2 mx-4">
-            <div class="bg-light form-field d-flex searchInput">
-              <div class="col-3 text-center ">
-                <label class=" input-group-text w-100">City</label>
-              </div>
-              <div class="col-9 ">
-              <select class="w-100 form-select " >
+          <div class=" col-3 m-2 mx-4">
+            <div class="input-group mb-3"  >
+              <label class="input-group-text" for="citySelect">City</label>
+              <select class="form-select" id="citySelect">
                 <option value="">--Select--</option>
-                 <option value="	Abbottabad	">	Abbottabad	</option>
-                <option value="	Attock	">	Attock	</option>
-                 <option value="	Awaran	">	Awaran	</option>
-                 <option value="	Badin	">	Badin	</option>
-                 <option value="	Bagh	">	Bagh	</option>
-                 <option value="	Bahawalpur	">	Bahawalpur	</option>
-                 <option value="	Bannu	">	Bannu	</option>
-                 <option value="	Battagram	">	Battagram	</option>
-                 <option value="	Bhakkar	">	Bhakkar	</option>
-                 <option value="	Bhimber	">	Bhimber	</option>
-                 <option value="	Chakwal	">	Chakwal	</option>
-                 <option value="	Chaman	">	Chaman	</option>
-                 <option value="	Charsadda	">	Charsadda	</option>
-                 <option value="	Chiniot	">	Chiniot	</option>
-                 <option value="	Dadu	">	Dadu	</option>
-                 <option value="	Dera Ghazi Khan	">	Dera Ghazi Khan	</option>
-                 <option value="	Dera Ismail Khan	">	Dera Ismail Khan	</option>
-                 <option value="	Dera Murad Jamali	">	Dera Murad Jamali	</option>
-                 <option value="	Diamer (Chilas)	">	Diamer (Chilas)	</option>
-                 <option value="	Faisalabad	">	Faisalabad	</option>
-                 <option value="	Ghanche	">	Ghanche	</option>
-                 <option value="	Ghizer	">	Ghizer	</option>
-                 <option value="	Ghotki	">	Ghotki	</option>
-                 <option value="	Gilgit	">	Gilgit	</option>
-                 <option value="	Gujranwala	">	Gujranwala	</option>
-                 <option value="	Gujrat	">	Gujrat	</option>
-                 <option value="	Gwadar	">	Gwadar	</option>
-                 <option value="	Hafizabad	">	Hafizabad	</option>
-                 <option value="	Hangu	">	Hangu	</option>
-                 <option value="	Haripur	">	Haripur	</option>
-                 <option value="	Haveli	">	Haveli	</option>
-                 <option value="	Hub	">	Hub	</option>
-                 <option value="	Hunza	">	Hunza	</option>
-                 <option value="	Hyderabad	">	Hyderabad	</option>
-                 <option value="	Islamabad	">	Islamabad	</option>
-                 <option value="	Jacobabad	">	Jacobabad	</option>
-                 <option value="	Jaffarabad	">	Jaffarabad	</option>
-                 <option value="	Jamshoro	">	Jamshoro	</option>
-                 <option value="	Jhelum	">	Jhelum	</option>
-                 <option value="	Kalat	">	Kalat	</option>
-                 <option value="	Karachi	">	Karachi	</option>
-                 <option value="	Karak	">	Karak	</option>
-                 <option value="	Kashmore	">	Kashmore	</option>
-                 <option value="	Kasur	">	Kasur	</option>
-                 <option value="	Kech	">	Kech	</option>
-                 <option value="	Khairpur	">	Khairpur	</option>
-                 <option value="	Khanewal	">	Khanewal	</option>
-                 <option value="	Kharan	">	Kharan	</option>
-                 <option value="	Khushab	">	Khushab	</option>
-                 <option value="	Khuzdar	">	Khuzdar	</option>
-                 <option value="	Kohat	">	Kohat	</option>
-                 <option value="	Kohistan	">	Kohistan	</option>
-                 <option value="	Kotli	">	Kotli	</option>
-                 <option value="	Lahore	">	Lahore	</option>
-                 <option value="	Lakki Marwat	">	Lakki Marwat	</option>
-                 <option value="	Larkana	">	Larkana	</option>
-                 <option value="	Lasbela	">	Lasbela	</option>
-                 <option value="	Layyah	">	Layyah	</option>
-                 <option value="	Lodhran	">	Lodhran	</option>
-                 <option value="	Loralai	">	Loralai	</option>
-                 <option value="	Lower Dir ">	Lower Dir 	</option>
-                 <option value="	Malakand	">	Malakand	</option>
-                 <option value="	Mansehra	">	Mansehra	</option>
-                 <option value="	Mardan	">	Mardan	</option>
-                 <option value="	Mastung	">	Mastung	</option>
-                 <option value="	Matiari	">	Matiari	</option>
-                 <option value="	Mianwali	">	Mianwali	</option>
-                 <option value="	Mirpur	">	Mirpur	</option>
-                 <option value="	Mirpur Khas	">	Mirpur Khas	</option>
-                 <option value="	Multan	">	Multan	</option>
-                 <option value="	Muzaffarabad	">	Muzaffarabad	</option>
-                 <option value="	Muzaffargarh	">	Muzaffargarh	</option>
-                 <option value="	Nagar	">	Nagar	</option>
-                 <option value="	Narowal	">	Narowal	</option>
-                 <option value="	Naseerabad	">	Naseerabad	</option>
-                 <option value="	Naushahro Feroze	">	Naushahro Feroze	</option>
-                 <option value="	Nawabshah	">	Nawabshah 	</option>
-                 <option value="	Neelum	">	Neelum	</option>
-                 <option value="	Nowshera	">	Nowshera	</option>
-                 <option value="	Okara	">	Okara	</option>
-                 <option value="	Pakpattan	">	Pakpattan	</option>
-                 <option value="	Panjgur	">	Panjgur	</option>
-                 <option value="	Peshawar	">	Peshawar	</option>
-                 <option value="	Pishin	">	Pishin	</option>
-                 <option value="	Quetta	">	Quetta	</option>
-                 <option value="	Rahim Yar Khan	">	Rahim Yar Khan	</option>
-                 <option value="	Rajanpur	">	Rajanpur	</option>
-                 <option value="	Rawalakot	">	Rawalakot	</option>
-                 <option value="	Rawalpindi	">	Rawalpindi	</option>
-                 <option value="	Sahiwal	">	Sahiwal	</option>
-                 <option value="	Sanghar	">	Sanghar	</option>
-                 <option value="	Sargodha	">	Sargodha	</option>
-                 <option value="	Shangla	">	Shangla	</option>
-                 <option value="	Sheikhupura	">	Sheikhupura	</option>
-                 <option value="	Shigar	">	Shigar	</option>
-                 <option value="	Shikarpur	">	Shikarpur	</option>
-                 <option value="	Sialkot	">	Sialkot	</option>
-                 <option value="	Sibi	">	Sibi	</option>
-                 <option value="	Skardu	">	Skardu	</option>
-                 <option value="	Sudhanoti	">	Sudhanoti	</option>
-                 <option value="	Sukkur	">	Sukkur	</option>
-                 <option value="	Swabi	">	Swabi	</option>
-                 <option value="	Swat (Mingora)	">	Swat (Mingora)	</option>
-                 <option value="	Tando Allahyar	">	Tando Allahyar	</option>
-                 <option value="	Tank	">	Tank	</option>
-                 <option value="	Tharparkar	">	Tharparkar	</option>
-                 <option value="	Thatta	">	Thatta	</option>
-                 <option value="	Toba Tek Singh	">	Toba Tek Singh	</option>
-                 <option value="	Torghar	">	Torghar	</option>
-                 <option value="	Turbat	">	Turbat	</option>
-                 <option value="	Umerkot	">	Umerkot	</option>
-                 <option value="	Upper Dir	">	Upper Dir	</option>
-                 <option value="	Vehari	">	Vehari	</option>
-                 <option value="	Zhob	">	Zhob	</option>
-                 <option value="	Ziarat	">	Ziarat	</option>
-
+                 <option value="Abbottabad">Abbottabad</option>
+                <option value="Attock">Attock</option>
+                 <option value="Awaran">Awaran</option>
+                 <option value="Badin">Badin</option>
+                 <option value="Bagh">Bagh</option>
+                 <option value="Bahawalpur">Bahawalpur</option>
+                 <option value="Bannu">Bannu</option>
+                 <option value="Battagram">Battagram</option>
+                 <option value="Bhakkar">Bhakkar</option>
+                 <option value="Bhimber">Bhimber</option>
+                 <option value="Chakwal">Chakwal</option>
+                 <option value="Chaman">Chaman</option>
+                 <option value="Charsadda">Charsadda</option>
+                 <option value="Chiniot">Chiniot</option>
+                 <option value="Dadu">Dadu</option>
+                 <option value="Dera Ghazi Khan">Dera Ghazi Khan</option>
+                 <option value="Dera Ismail Khan">Dera Ismail Khan</option>
+                 <option value="Dera Murad Jamali">Dera Murad Jamali</option>
+                 <option value="Diamer (Chilas)">Diamer (Chilas)</option>
+                 <option value="Faisalabad">Faisalabad</option>
+                 <option value="Ghanche">Ghanche</option>
+                 <option value="Ghizer">Ghizer</option>
+                 <option value="Ghotki">Ghotki</option>
+                 <option value="Gilgit">Gilgit</option>
+                 <option value="Gujranwala">Gujranwala</option>
+                 <option value="Gujrat">Gujrat</option>
+                 <option value="Gwadar">Gwadar</option>
+                 <option value="Hafizabad">Hafizabad</option>
+                 <option value="Hangu">Hangu</option>
+                 <option value="Haripur">Haripur</option>
+                 <option value="Haveli">Haveli</option>
+                 <option value="Hub">Hub</option>
+                 <option value="Hunza">Hunza</option>
+                 <option value="Hyderabad">Hyderabad</option>
+                 <option value="Islamabad">Islamabad</option>
+                 <option value="Jacobabad">Jacobabad</option>
+                 <option value="Jaffarabad">Jaffarabad</option>
+                 <option value="Jamshoro">Jamshoro</option>
+                 <option value="Jhelum">Jhelum</option>
+                 <option value="Kalat">Kalat</option>
+                 <option value="Karachi">Karachi</option>
+                 <option value="Karak">Karak</option>
+                 <option value="Kashmore">Kashmore</option>
+                 <option value="Kasur">Kasur</option>
+                 <option value="Kech">Kech</option>
+                 <option value="Khairpur">Khairpur</option>
+                 <option value="Khanewal">Khanewal</option>
+                 <option value="Kharan">Kharan</option>
+                 <option value="Khushab">Khushab</option>
+                 <option value="Khuzdar">Khuzdar</option>
+                 <option value="Kohat">Kohat</option>
+                 <option value="Kohistan">Kohistan</option>
+                 <option value="Kotli">Kotli</option>
+                 <option value="Lahore">Lahore</option>
+                 <option value="Lakki Marwat">Lakki Marwat</option>
+                 <option value="Larkana">Larkana</option>
+                 <option value="Lasbela">Lasbela</option>
+                 <option value="Layyah">Layyah</option>
+                 <option value="Lodhran">Lodhran</option>
+                 <option value="Loralai">Loralai</option>
+                 <option value="Lower Dir (Timergara)">Lower Dir (Timergara)</option>
+                 <option value="Malakand">Malakand</option>
+                 <option value="Mansehra">Mansehra</option>
+                 <option value="Mardan">Mardan</option>
+                 <option value="Mastung">Mastung</option>
+                 <option value="Matiari">Matiari</option>
+                 <option value="Mianwali">Mianwali</option>
+                 <option value="Mirpur">Mirpur</option>
+                 <option value="Mirpur Khas">Mirpur Khas</option>
+                 <option value="Multan">Multan</option>
+                 <option value="Muzaffarabad">Muzaffarabad</option>
+                 <option value="Muzaffargarh">Muzaffargarh</option>
+                 <option value="Nagar">Nagar</option>
+                 <option value="Narowal">Narowal</option>
+                 <option value="Naseerabad">Naseerabad</option>
+                 <option value="Naushahro Feroze">Naushahro Feroze</option>
+                 <option value="Nawabshah (Shaheed Benazirabad)">Nawabshah (Shaheed Benazirabad)</option>
+                 <option value="Neelum">Neelum</option>
+                 <option value="Nowshera">Nowshera</option>
+                 <option value="Okara">Okara</option>
+                 <option value="Pakpattan">Pakpattan</option>
+                 <option value="Panjgur">Panjgur</option>
+                 <option value="Peshawar">Peshawar</option>
+                 <option value="Pishin">Pishin</option>
+                 <option value="Quetta">Quetta</option>
+                 <option value="Rahim Yar Khan">Rahim Yar Khan</option>
+                 <option value="Rajanpur">Rajanpur</option>
+                 <option value="Rawalakot">Rawalakot</option>
+                 <option value="Rawalpindi">Rawalpindi</option>
+                 <option value="Sahiwal">Sahiwal</option>
+                 <option value="Sanghar">Sanghar</option>
+                 <option value="Sargodha">Sargodha</option>
+                 <option value="Shangla">Shangla</option>
+                 <option value="Sheikhupura">Sheikhupura</option>
+                 <option value="Shigar">Shigar</option>
+                 <option value="Shikarpur">Shikarpur</option>
+                 <option value="Sialkot">Sialkot</option>
+                 <option value="Sibi">Sibi</option>
+                 <option value="Skardu">Skardu</option>
+                 <option value="Sudhanoti">Sudhanoti</option>
+                 <option value="Sukkur">Sukkur</option>
+                 <option value="Swabi">Swabi</option>
+                 <option value="Swat (Mingora)">Swat (Mingora)</option>
+                 <option value="Tando Allahyar">Tando Allahyar</option>
+                 <option value="Tando Muhammad Khan">Tando Muhammad Khan</option>
+                 <option value="Tank">Tank</option>
+                 <option value="Tharparkar">Tharparkar</option>
+                 <option value="Thatta">Thatta</option>
+                 <option value="Toba Tek Singh">Toba Tek Singh</option>
+                 <option value="Torghar">Torghar</option>
+                 <option value="Turbat">Turbat</option>
+                 <option value="Umerkot">Umerkot</option>
+                 <option value="Upper Dir">Upper Dir</option>
+                 <option value="Vehari">Vehari</option>
+                 <option value="Zhob">Zhob</option>
+                 <option value="Ziarat">Ziarat</option>
               </select>
-              </div>
             </div>
+            
 
           </div>
           <div class="col-8 my-2">
-            <div class="bg-light d-flex searchInput">
-              <div class="col-3 text-center">
-                <label class="text-center input-group-text  w-100">Location </label>
-              </div>
-              <div class="col-7">
-                <input class="form-control w-100" type="text" placeholder="" value="">
-              </div>
-              <div class="col-2">
-                <button class="btn btn-success w-100 " type="button" id="button-addon2">FIND</button>
-              </div>
-          </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="locationInput">Location</label>
+              <input type="text" class="form-control" id="locationInput" placeholder="" value="">
+              <button class="btn btn-success" type="button" id="button-addon2">FIND</button>
+            </div>
+            
           </div>
 
         </div>
       </div>
 
     </div>
-    <div class="container">
-      <div class="d-block d-md-flex d-lg-flex section-two">
-        <div class="txt col-md-6 col-lg-6 col-12 ">
+     <div class="container">
+      <div class="d-block d-md-flex d-lg-flex section-two gap-3" >
+        <div class="txt col-md-6 col-lg-6 col-12" data-aos="fade-right" data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
           <h4>Get home recommendations</h4>
           <p>Sign in for a more personalized experience.</p>
           <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Sign in</button>
         </div>
-        <div class="col-md-6 col-lg-6 col-12img">
-
-          <img src="assets/home-1st-section.jpg" class="col-12 w-100" alt="">
+        <div class="img-container col-md-6 col-lg-6 col-12" data-aos="fade-left" data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+          <img src="assets/home-1st-section.jpg" class="image" alt="Home section image">
         </div>
+        
+      
       </div>
     </div>
-    <div class=" card-container-main">
+    <div class="card-container-main" >
       <div class="container card-container d-block d-lg-flex d-md-flex">
-        <div class="card1 col-12 col-md-4 col-lg-4 p-4">
-          <div class="card text-center" style="border: 1px solid #ddd; border-radius: 2.75rem;">
+        <div class="card1 col-12 col-md-4 col-lg-4 p-4" data-aos="zoom-out" data-aos-duration="2000">
+          <div class="card text-center card-hover" style="border: 1px solid #ddd; border-radius: 2.75rem; transition: border-color 0.3s ease;" >
             <img src="assets/homepage-spot-agent-lg-1.webp" class="w-50 align-center" alt="Home Image">
             <div class="card-title">
               <h3>
-                <b>
-                  Buy a home
-                </b>
+                <b>Buy a home</b>
               </h3>
             </div>
-            <p class="card-content px-2">Find your place with an immersive photo experience and the most listings,
-              including things you won't find anywhere else.</p>
+            <p class="card-content px-2">
+              Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else.
+            </p>
             <div class="card-actions">
               <a href="./buy.html">
                 <button class="btn btn-outline-primary">Browse homes</button>
@@ -693,8 +530,8 @@
             </div>
           </div>
         </div>
-        <div class="card1 col-12 col-md-4 col-lg-4  p-4">
-          <div class="card text-center" style="border: 1px solid #ddd; border-radius: 2.75rem;">
+        <div class="card1 col-12 col-md-4 col-lg-4 p-4" data-aos="zoom-out" data-aos-duration="2000">
+          <div class="card text-center card-hover" style="border: 1px solid #ddd; border-radius: 2.75rem; transition: border-color 0.3s ease;">
             <img src="assets/homepage-spot-sell-lg-1.webp" class="w-50 align-center" alt="Sell a home">
             <div class="card-title my-3">
               <h3>
@@ -709,18 +546,15 @@
             </div>
           </div>
         </div>
-        <div class="card1 col-12 col-md-4 col-lg-4  p-4">
-          <div class="card text-center" style="border: 1px solid #ddd; border-radius: 2.75rem;" >
+        <div class="card1 col-12 col-md-4 col-lg-4 p-4" data-aos="zoom-out" data-aos-duration="2000">
+          <div class="card text-center card-hover" style="border: 1px solid #ddd; border-radius: 2.75rem; transition: border-color 0.3s ease;">
             <img src="assets/homepage-spot-rent-lg-1.webp" class="w-50 align-center" style="width: 50%;">
             <div class="card-title">
               <h3>
-                <b>
-                  Rent a home
-                </b>
+                <b>Rent a home</b>
               </h3>
             </div>
-            <p class="card-content px-2">We’re creating a seamless online experience – from shopping on the largest rental
-              network, to applying, to paying rent.</p>
+            <p class="card-content px-2">We’re creating a seamless online experience – from shopping on the largest rental network, to applying, to paying rent.</p>
             <div class="card-actions">
               <a href="./rent.html">
                 <button class="btn btn-outline-primary">Find rentals</button>
@@ -730,9 +564,11 @@
         </div>
       </div>
     </div>
-    <div class="container">
+ 
+  
+    <div class="container my-4">
       <div class="project_wrapper">
-        <div class="proHeading p-4">
+        <div class="proHeading p-4 text-center">
           <h4>
             Projects We are in
             <span class="bg-danger p-2 px-3 trending">
@@ -740,245 +576,183 @@
             </span>
           </h4>
         </div>
-          <!-- Swiper -->
-           <div class="html">
-            <div class="body">
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper m-4">
-                  <div class="swiper-slide">
-                    <div class="card mx-2">
-                      <div class="img-holder">
-                        <span class="px-2 bg-danger text-light hot">HOT</span>
-                        <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        1
-                        <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
-                        <div class="title">Peral Square Residency, Islamabad</div>
-                        <p class="text-muted">Islamabad, Bahria Town</p>
-                        <div class="title">Flat, Penthouse</div>
-                        <div class="title">620 sqft to 1759 sqft</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card mx-2">
-                      <div class="img-holder">
-                        <span class="px-2 bg-danger text-light hot">HOT</span>
-                        <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        2
-                        <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
-                        <div class="title">Peral Square Residency, Islamabad</div>
-                        <p class="text-muted">Islamabad, Bahria Town</p>
-                        <div class="title">Flat, Penthouse</div>
-                        <div class="title">620 sqft to 1759 sqft</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card mx-2">
-                      <div class="img-holder">
-                        <span class="px-2 bg-danger text-light hot">HOT</span>
-                        <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        3
-                        <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
-                        <div class="title">Peral Square Residency, Islamabad</div>
-                        <p class="text-muted">Islamabad, Bahria Town</p>
-                        <div class="title">Flat, Penthouse</div>
-                        <div class="title">620 sqft to 1759 sqft</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card mx-2">
-                      <div class="img-holder">
-                        <span class="px-2 bg-danger text-light hot">HOT</span>
-                        <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        4
-                        <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
-                        <div class="title">Peral Square Residency, Islamabad</div>
-                        <p class="text-muted">Islamabad, Bahria Town</p>
-                        <div class="title">Flat, Penthouse</div>
-                        <div class="title">620 sqft to 1759 sqft</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card mx-2">
-                      <div class="img-holder">
-                        <span class="px-2 bg-danger text-light hot">HOT</span>
-                        <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        5
-                        <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
-                        <div class="title">Peral Square Residency, Islamabad</div>
-                        <p class="text-muted">Islamabad, Bahria Town</p>
-                        <div class="title">Flat, Penthouse</div>
-                        <div class="title">620 sqft to 1759 sqft</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card mx-2">
-                      <div class="img-holder">
-                        <span class="px-2 bg-danger text-light hot">HOT</span>
-                        <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        6
-                        <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
-                        <div class="title">Peral Square Residency, Islamabad</div>
-                        <p class="text-muted">Islamabad, Bahria Town</p>
-                        <div class="title">Flat, Penthouse</div>
-                        <div class="title">620 sqft to 1759 sqft</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card mx-2">
-                      <div class="img-holder">
-                        <span class="px-2 bg-danger text-light hot">HOT</span>
-                        <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        7
-                        <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
-                        <div class="title">Peral Square Residency, Islamabad</div>
-                        <p class="text-muted">Islamabad, Bahria Town</p>
-                        <div class="title">Flat, Penthouse</div>
-                        <div class="title">620 sqft to 1759 sqft</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card mx-2">
-                      <div class="img-holder">
-                        <span class="px-2 bg-danger text-light hot">HOT</span>
-                        <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        8
-                        <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
-                        <div class="title">Peral Square Residency, Islamabad</div>
-                        <p class="text-muted">Islamabad, Bahria Town</p>
-                        <div class="title">Flat, Penthouse</div>
-                        <div class="title">620 sqft to 1759 sqft</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card mx-2">
-                      <div class="img-holder">
-                        <span class="px-2 bg-danger text-light hot">HOT</span>
-                        <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
-                      </div>
-                      <div class="card-body">
-                        9
-                        <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
-                        <div class="title">Peral Square Residency, Islamabad</div>
-                        <p class="text-muted">Islamabad, Bahria Town</p>
-                        <div class="title">Flat, Penthouse</div>
-                        <div class="title">620 sqft to 1759 sqft</div>
-                      </div>
-                    </div>
-                  </div>
+    
+        <!-- Swiper Container -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="card" style="width: 18rem;" data-aos="flip-right" data-aos-duration="2000">
+                <div class="img-holder">
+                  <span class="px-2 bg-danger text-light hot">HOT</span>
+                  <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="card-body">
+                  <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
+                  <div class="title">Peral Square Residency, Islamabad</div>
+                  <p class="text-muted">Islamabad, Bahria Town</p>
+                  <div class="title">Flat, Penthouse</div>
+                  <div class="title">620 sqft to 1759 sqft</div>
+                </div>
               </div>
             </div>
-           </div>
- 
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 5,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-      },
-    });
-  </script>
-
-
-      </div>
-    </div>
-    <div class="city_section container my-2">
-      <h4 class="my-4"> <span class="location_heading rounded p-2">Most Popular Locations in Pakistan</span></h4>
-      <div class="city_container">
-        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Lahore</div></a>
-       <a class="text-dark"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Islamabad</div></a>
-        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Faisalabad</div></a>
-       <a class="text-dark"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Rawalpindi</div></a>
-        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Multan</div></a>
-       <a class="text-dark"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Gujranwala</div></a>
-        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Sialkot</div></a>
-        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Sargodha</div></a>
-        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Bahawalpur</div></a>
-        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Sheikhupura</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Jhelum</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Okara</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Rahim Yar Khan</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gujrat</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Kasur</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mianwali</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hafizabad</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Muzaffargarh</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Chiniot</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Karachi</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Larkana</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hyderabad</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mirpur Khas</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Peshawar</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Umerkot</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mardan</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Abbottabad</div></a>
-      <a class="text-dark">  <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Quetta</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gwadar</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Chaman</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gilgit</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Skardu</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hunza</div></a>
-        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Muzaffarabad</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mirpur</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Bagh</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Rawalakot</div></a>
-       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Neelum</div></a>
-      </div>
-    </div>
+            
+            <!-- Card 2 -->
+            <div class="swiper-slide" >
+              <div class="card" style="width: 18rem;"  data-aos="flip-right" data-aos-duration="2000">
+                <div class="img-holder">
+                  <span class="px-2 bg-danger text-light hot">HOT</span>
+                  <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
+                  <div class="title">Peral Square Residency, Islamabad</div>
+                  <p class="text-muted">Islamabad, Bahria Town</p>
+                  <div class="title">Flat, Penthouse</div>
+                  <div class="title">620 sqft to 1759 sqft</div>
+                </div>
+              </div>
+            </div>
     
-    <div class="about-section text-center container">
-      <h4>About PlotsAdda's Recommendations</h4>
+            <!-- Card 3 -->
+            <div class="swiper-slide" >
+              <div class="card" style="width: 18rem;" data-aos="flip-right" data-aos-duration="2000">
+                <div class="img-holder">
+                  <span class="px-2 bg-danger text-light hot">HOT</span>
+                  <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
+                  <div class="title">Peral Square Residency, Islamabad</div>
+                  <p class="text-muted">Islamabad, Bahria Town</p>
+                  <div class="title">Flat, Penthouse</div>
+                  <div class="title">620 sqft to 1759 sqft</div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="swiper-slide" >
+              <div class="card" style="width: 18rem;" data-aos="flip-right" data-aos-duration="2000">
+                <div class="img-holder">
+                  <span class="px-2 bg-danger text-light hot">HOT</span>
+                  <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
+                  <div class="title">Peral Square Residency, Islamabad</div>
+                  <p class="text-muted">Islamabad, Bahria Town</p>
+                  <div class="title">Flat, Penthouse</div>
+                  <div class="title">620 sqft to 1759 sqft</div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Card 5 -->
+            <div class="swiper-slide " >
+              <div class="card" style="width: 18rem;" data-aos="flip-right" data-aos-duration="2000">
+                <div class="img-holder">
+                  <span class="px-2 bg-danger text-light hot">HOT</span>
+                  <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
+                  <div class="title">Peral Square Residency, Islamabad</div>
+                  <p class="text-muted">Islamabad, Bahria Town</p>
+                  <div class="title">Flat, Penthouse</div>
+                  <div class="title">620 sqft to 1759 sqft</div>
+                </div>
+              </div>
+              </div>
+           
+    
+            <!-- Card 6 -->
+            <div class="swiper-slide " >
+              <div class="card" style="width: 18rem;" data-aos="flip-right" data-aos-duration="2000">
+                <div class="img-holder">
+                  <span class="px-2 bg-danger text-light hot">HOT</span>
+                  <img src="./assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <div class="title">PKR 83.7 Lakh to 2.81 Crore</div>
+                  <div class="title">Peral Square Residency, Islamabad</div>
+                  <p class="text-muted">Islamabad, Bahria Town</p>
+                  <div class="title">Flat, Penthouse</div>
+                  <div class="title">620 sqft to 1759 sqft</div>
+                </div>
+              </div>
+              </div>
+    
+          </div>
+    
+          <!-- Swiper Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 4,        // Show 4 cards at a time
+        spaceBetween: 10,        // Space between cards
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        loop: false,             // Set to true if you want infinite looping
+      });
+    </script>
+
+
+    <div class="city_section container my-2">
+      <h4 class="my-4 text-center">
+        <span class="location_heading rounded p-2 fw-bold fs-3">Most Popular Locations in Pakistan</span>
+      </h4>
+      
+      <div class="city_container">
+        <a class="city_item"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Lahore</div></a>
+       <a class="city_item"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Islamabad</div></a>
+        <a class="city_item"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Faisalabad</div></a>
+       <a class="city_item"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Rawalpindi</div></a>
+        <a class="city_item"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Sialkot</div></a>
+        <a class="city_item"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Sargodha</div></a>
+        <a class="city_item"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Bahawalpur</div></a>
+        <a class="city_item"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Sheikhupura</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Jhelum</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Okara</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Rahim Yar Khan</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gujrat</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Kasur</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mianwali</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hafizabad</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Muzaffargarh</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Chiniot</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Karachi</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Larkana</div></a>
+       <a class="city_item"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hyderabad</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mirpur Khas</div></a>
+       <a class="city_item"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Peshawar</div></a>
+       <a class="city_item"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Umerkot</div></a>
+       <a class="city_item"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mardan</div></a>
+       <a class="city_item"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Abbottabad</div></a>
+      <a class="city_item">  <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Quetta</div></a>
+       <a class="city_item"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gwadar</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Chaman</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gilgit</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Skardu</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hunza</div></a>
+        <a class="city_item"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Muzaffarabad</div></a>
+       <a class="city_item"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mirpur</div></a>
+      </div>
+    <div class="about-section text-center container" data-aos="fade-up"
+    data-aos-duration="3000">
+      <h4 style="color: #28a745;">About PlotsAdda's Recommendations</h4>
       <p>Recommendations are based on your location and search activity, such as the homes you've viewed and saved and
         the filters you've used. We use this information to bring similar homes to your attention, so you don't miss
         out. </p>
     </div>
-    
+     
 
 
 
