@@ -9,3 +9,61 @@
 #home_opt{
     display: none;
 }
+/* Card hover effect */
+
+
+
+/* Styling for the card image */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card area */
+    border-radius: 8px;
+}
+
+/* Card container styling */
+.card-body {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for better readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Price box styling */
+.card-body h5 {
+    font-weight: bold;
+    color: #2e8b57; /* More subdued green for better readability */
+    font-size: 1.25rem; /* Slightly larger font */
+    margin-bottom: 10px;
+}
+
+/* Text styling inside the card */
+.card-body p {
+    font-size: 1rem;
+    color: #555; /* A subtle dark gray color for better text contrast */
+    line-height: 1.5; /* Improved line spacing */
+}
+
+/* Property details heading */
+.card-body p:first-of-type {
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Card hover effect */
+.card:hover {
+    box-shadow: 0 4px 15px rgba(8, 153, 64, 0.5); /* Optional shadow effect on hover */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+/* Image zoom-out effect on hover */
+
+
+/* General styling for text */
+.card-body h5, .card-body p {
+    margin: 0;
+    padding: 0;
+}
