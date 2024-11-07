@@ -11,7 +11,15 @@
 }
 /* Card hover effect */
 
+.main {
+    position: relative;
+}
 
+#filterButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
 
 /* Styling for the card image */
 .card img {
@@ -21,14 +29,29 @@
     border-radius: 8px;
 }
 
+.row_class {
+    display: flex;
+    flex-direction: column;
+   
+    position: relative; /* To position the button container relative to this div */
+}
 /* Card container styling */
 .card-body {
     padding: 20px;
-    background-color: #f9f9f9; /* Light background for better readability */
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    flex-grow: 1;
+    background-color: antiquewhite;
 }
-
+.btn-container {
+    position: absolute;
+    bottom: 0; /* Places the button container at the very bottom */
+    left: 0;
+    right: 0;
+    margin-bottom: 10px; /* Optional: Adds some space at the bottom */
+    display: flex;
+    flex-wrap: wrap;
+     /* Distributes buttons evenly with space between them */
+    padding: 0 15px; /* Optional: Adds padding on the sides */
+}
 /* Price box styling */
 .card-body h5 {
     font-weight: bold;
@@ -67,3 +90,51 @@
     margin: 0;
     padding: 0;
 }
+
+.btn-container a {
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+.ads-section {
+    border: 1px solid #000; /* Adds a black border around the section */
+    padding: 15px; /* Adds padding inside the section */
+    margin-top: 50px; /* Adds 50px margin on top */
+    margin-bottom: 50px; /* Adds 50px margin at the bottom */
+    height: 500px;
+}.image-container {
+    position: relative;
+    display: inline-block;
+  }
+ 
+  
+  .icon-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .icon-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .icon-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);  /* Slightly darker on hover */
+  }
+  
+  .icon-btn i {
+    font-size: 20px;
+  }
+  
+  .hidden_class{
+   
+    opacity: 0;
+  }
+  
