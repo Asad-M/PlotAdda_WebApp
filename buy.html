@@ -17,6 +17,11 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+  <!-- Add Bootstrap 5 CSS and JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
    <link rel="stylesheet" href="./css/login.css">
     <title>Buy</title>
 </head>
@@ -456,21 +461,401 @@
       <h1 class="text-center">  P L O T S A D D A </h1>
     </div> -->
   </header>
+  <div class="content-container1" style="background-color: rgba(0, 0, 0, 0.8); padding: 5px 30px; margin: 5px 30px;" >
+    <div class="row">
       
+<!-- Buy and rent drop dropdown -->
+<div class="col-md-3">
+        <div class="label">
+          <label for="" style="color: white;"><b>I want to</b></label>
+        </div>
+        <div class="">
+          <div class="">
+             
+              <select class="form-control" id="purpose" name="whoAreU">
+                  <option value="buy">Buy</option>
+                  <option value="rent">Rent</option>
+              </select>
+          </div>
+        </div>
+</div>
+          <!-- city dropdown -->
+
+
+
+          <div class="col-md-3">
+            <div class="label">
+              <label for="" style="color: white;"><b>City</b></label>
+            </div>
+              <select class="py-2 w-100">
+                <option value="">--Select--</option>
+                 <option value="	Abbottabad	">	Abbottabad	</option>
+                <option value="	Attock	">	Attock	</option>
+                 <option value="	Awaran	">	Awaran	</option>
+                 <option value="	Badin	">	Badin	</option>
+                 <option value="	Bagh	">	Bagh	</option>
+                 <option value="	Bahawalpur	">	Bahawalpur	</option>
+                 <option value="	Bannu	">	Bannu	</option>
+                 <option value="	Battagram	">	Battagram	</option>
+                 <option value="	Bhakkar	">	Bhakkar	</option>
+                 <option value="	Bhimber	">	Bhimber	</option>
+                 <option value="	Chakwal	">	Chakwal	</option>
+                 <option value="	Chaman	">	Chaman	</option>
+                 <option value="	Charsadda	">	Charsadda	</option>
+                 <option value="	Chiniot	">	Chiniot	</option>
+                 <option value="	Dadu	">	Dadu	</option>
+                 <option value="	Dera Ghazi Khan	">	Dera Ghazi Khan	</option>
+                 <option value="	Dera Ismail Khan	">	Dera Ismail Khan	</option>
+                 <option value="	Dera Murad Jamali	">	Dera Murad Jamali	</option>
+                 <option value="	Diamer (Chilas)	">	Diamer (Chilas)	</option>
+                 <option value="	Faisalabad	">	Faisalabad	</option>
+                 <option value="	Ghanche	">	Ghanche	</option>
+                 <option value="	Ghizer	">	Ghizer	</option>
+                 <option value="	Ghotki	">	Ghotki	</option>
+                 <option value="	Gilgit	">	Gilgit	</option>
+                 <option value="	Gujranwala	">	Gujranwala	</option>
+                 <option value="	Gujrat	">	Gujrat	</option>
+                 <option value="	Gwadar	">	Gwadar	</option>
+                 <option value="	Hafizabad	">	Hafizabad	</option>
+                 <option value="	Hangu	">	Hangu	</option>
+                 <option value="	Haripur	">	Haripur	</option>
+                 <option value="	Haveli	">	Haveli	</option>
+                 <option value="	Hub	">	Hub	</option>
+                 <option value="	Hunza	">	Hunza	</option>
+                 <option value="	Hyderabad	">	Hyderabad	</option>
+                 <option value="	Islamabad	">	Islamabad	</option>
+                 <option value="	Jacobabad	">	Jacobabad	</option>
+                 <option value="	Jaffarabad	">	Jaffarabad	</option>
+                 <option value="	Jamshoro	">	Jamshoro	</option>
+                 <option value="	Jhelum	">	Jhelum	</option>
+                 <option value="	Kalat	">	Kalat	</option>
+                 <option value="	Karachi	">	Karachi	</option>
+                 <option value="	Karak	">	Karak	</option>
+                 <option value="	Kashmore	">	Kashmore	</option>
+                 <option value="	Kasur	">	Kasur	</option>
+                 <option value="	Kech	">	Kech	</option>
+                 <option value="	Khairpur	">	Khairpur	</option>
+                 <option value="	Khanewal	">	Khanewal	</option>
+                 <option value="	Kharan	">	Kharan	</option>
+                 <option value="	Khushab	">	Khushab	</option>
+                 <option value="	Khuzdar	">	Khuzdar	</option>
+                 <option value="	Kohat	">	Kohat	</option>
+                 <option value="	Kohistan	">	Kohistan	</option>
+                 <option value="	Kotli	">	Kotli	</option>
+                 <option value="	Lahore	">	Lahore	</option>
+                 <option value="	Lakki Marwat	">	Lakki Marwat	</option>
+                 <option value="	Larkana	">	Larkana	</option>
+                 <option value="	Lasbela	">	Lasbela	</option>
+                 <option value="	Layyah	">	Layyah	</option>
+                 <option value="	Lodhran	">	Lodhran	</option>
+                 <option value="	Loralai	">	Loralai	</option>
+                 <option value="	Lower Dir (Timergara)	">	Lower Dir (Timergara)	</option>
+                 <option value="	Malakand	">	Malakand	</option>
+                 <option value="	Mansehra	">	Mansehra	</option>
+                 <option value="	Mardan	">	Mardan	</option>
+                 <option value="	Mastung	">	Mastung	</option>
+                 <option value="	Matiari	">	Matiari	</option>
+                 <option value="	Mianwali	">	Mianwali	</option>
+                 <option value="	Mirpur	">	Mirpur	</option>
+                 <option value="	Mirpur Khas	">	Mirpur Khas	</option>
+                 <option value="	Multan	">	Multan	</option>
+                 <option value="	Muzaffarabad	">	Muzaffarabad	</option>
+                 <option value="	Muzaffargarh	">	Muzaffargarh	</option>
+                 <option value="	Nagar	">	Nagar	</option>
+                 <option value="	Narowal	">	Narowal	</option>
+                 <option value="	Naseerabad	">	Naseerabad	</option>
+                 <option value="	Naushahro Feroze	">	Naushahro Feroze	</option>
+                 <option value="	Nawabshah (Shaheed Benazirabad)	">	Nawabshah (Shaheed Benazirabad)	</option>
+                 <option value="	Neelum	">	Neelum	</option>
+                 <option value="	Nowshera	">	Nowshera	</option>
+                 <option value="	Okara	">	Okara	</option>
+                 <option value="	Pakpattan	">	Pakpattan	</option>
+                 <option value="	Panjgur	">	Panjgur	</option>
+                 <option value="	Peshawar	">	Peshawar	</option>
+                 <option value="	Pishin	">	Pishin	</option>
+                 <option value="	Quetta	">	Quetta	</option>
+                 <option value="	Rahim Yar Khan	">	Rahim Yar Khan	</option>
+                 <option value="	Rajanpur	">	Rajanpur	</option>
+                 <option value="	Rawalakot	">	Rawalakot	</option>
+                 <option value="	Rawalpindi	">	Rawalpindi	</option>
+                 <option value="	Sahiwal	">	Sahiwal	</option>
+                 <option value="	Sanghar	">	Sanghar	</option>
+                 <option value="	Sargodha	">	Sargodha	</option>
+                 <option value="	Shangla	">	Shangla	</option>
+                 <option value="	Sheikhupura	">	Sheikhupura	</option>
+                 <option value="	Shigar	">	Shigar	</option>
+                 <option value="	Shikarpur	">	Shikarpur	</option>
+                 <option value="	Sialkot	">	Sialkot	</option>
+                 <option value="	Sibi	">	Sibi	</option>
+                 <option value="	Skardu	">	Skardu	</option>
+                 <option value="	Sudhanoti	">	Sudhanoti	</option>
+                 <option value="	Sukkur	">	Sukkur	</option>
+                 <option value="	Swabi	">	Swabi	</option>
+                 <option value="	Swat (Mingora)	">	Swat (Mingora)	</option>
+                 <option value="	Tando Allahyar	">	Tando Allahyar	</option>
+                 <option value="	Tando Muhammad Khan	">	Tando Muhammad Khan	</option>
+                 <option value="	Tank	">	Tank	</option>
+                 <option value="	Tharparkar	">	Tharparkar	</option>
+                 <option value="	Thatta	">	Thatta	</option>
+                 <option value="	Toba Tek Singh	">	Toba Tek Singh	</option>
+                 <option value="	Torghar	">	Torghar	</option>
+                 <option value="	Turbat	">	Turbat	</option>
+                 <option value="	Umerkot	">	Umerkot	</option>
+                 <option value="	Upper Dir	">	Upper Dir	</option>
+                 <option value="	Vehari	">	Vehari	</option>
+                 <option value="	Zhob	">	Zhob	</option>
+                 <option value="	Ziarat	">	Ziarat	</option>
+
+              </select>
+          </div>
+
+
+          <!-- Location dropdown -->
+          <div class="col-md-3">
+            <div class="label">
+              <label for="" style="color: white;"><b>Location</b></label>
+            </div>
+            <input type="text" class="w-100 form-control" placeholder="Enter Location" >
+          </div>
+            
+          <div class="col-md-3">
+            <div class="label">
+                <label for="" style="color: white;"><b>Property Type</b></label>
+            </div>
+            <div style="position: relative;">
+              <div id="div1" style="background-color: white; color: black; height: 40px; cursor: pointer; border: 1px solid black; border-radius: 5px; display: flex; align-items: center; padding-left: 10px;" onclick="toggleDiv()">
+                <h6 class="propertyTypeTxt" style="margin: 0;">Home</h6>
+                </div>
+        
+                <div id="div2" style="background-color: white; display: none; margin-top: 5px; border: 1px solid black; border-radius: 5px; position: absolute; top: 45px; left: 0; width: 100%; z-index: 1;">
+                 <div class="tab-container1">
+                <ul class="nav nav-tabs custom-tabs" id="propertyTabs" role="tablist" style="background-color: white; ">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true" onclick="updatePropertyType('Home')">Homes</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="plots-tab" data-bs-toggle="tab" data-bs-target="#plots" type="button" role="tab" aria-controls="plots" aria-selected="false" onclick="updatePropertyType('Plots')">Plots</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="commercial-tab" data-bs-toggle="tab" data-bs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false"  onclick="updatePropertyType('Commercial')">Commercial</button>
+                  </li>
+                </ul>
+              </div>
+              
+              <style>
+                .tab-container1 {
+                  display: flex;
+                  justify-content: center; /* Centers the ul horizontally */
+                }
+
+
+                
+
+  /* Custom styling for tabs */
+  .custom-tabs .nav-link {
+    color: black; /* Unselected tab color */
+    font-weight: 500;
+    border: none; /* Remove border */
+    border-bottom: 2px solid transparent; /* Hide bottom border by default */
+  }
+  
+  #div1 ,#div2{
+    border-radius: 5px;
+  }
+  /* Style for the active tab */
+  .custom-tabs .nav-link.active {
+    color: #28a745; /* Green color for selected tab */
+    border-bottom: 3px solid #28a745; /* Green underline for selected tab */
+    font-weight: bold;
+  }
+
+  /* Hover effect */
+  .custom-tabs .nav-link:hover {
+    color: #28a745; /* Green color on hover */
+  }
+  
+</style>
+          
+<script>
+
+
+  // Function to toggle visibility of div2
+  function toggleDiv() {
+    const div2 = document.getElementById('div2');
+    if (div2.style.display === 'none') {
+      div2.style.display = 'block';  // Show div2
+    } else {
+      div2.style.display = 'none';   // Hide div2
+    }
+  }
+
+
+
+  
+</script>
+              <!-- Tab Content -->
+              <div class="tab-content" id="propertyTabsContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <!-- Property Types for Homes -->
+                  <div class="btn-group-wrap">
+                    <input type="radio" class="btn-check" name="propertyType" id="house" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="house">House</label>
+                
+                    <input type="radio" class="btn-check" name="propertyType" id="flat" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="flat">Flat</label>
+                
+                    <input type="radio" class="btn-check" name="propertyType" id="upperPortion" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="upperPortion">Upper Portion</label>
+                
+                    <input type="radio" class="btn-check" name="propertyType" id="lowerPortion" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="lowerPortion">Lower Portion</label>
+                
+                    <input type="radio" class="btn-check" name="propertyType" id="farmHouse" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="farmHouse">Farm House</label>
+                
+                    <input type="radio" class="btn-check" name="propertyType" id="room" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="room">Room</label>
+                
+                    <input type="radio" class="btn-check" name="propertyType" id="penthouse" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="penthouse">Penthouse</label>
+                </div>
+                
+                  
+               
+                </div>
+                <div class="tab-pane fade" id="plots" role="tabpanel" aria-labelledby="plots-tab">
+                  <!-- Property Types for Plots -->
+                  <div class="btn-group-wrap">
+                    <input type="radio" class="btn-check" name="plotType" id="plotType1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="plotType1">Plot Type 1</label>
+                
+                    <input type="radio" class="btn-check" name="plotType" id="plotType2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="plotType2">Plot Type 2</label>
+                
+                    <input type="radio" class="btn-check" name="plotType" id="plotType3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="plotType3">Plot Type 3</label>
+                </div>
+                
+                </div>
+                <div class="tab-pane fade" id="commercial" role="tabpanel" aria-labelledby="commercial-tab">
+                  <!-- Property Types for Commercial -->
+                  <div class="btn-group-wrap">
+                    <input type="radio" class="btn-check" name="propertyType" id="shop" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="shop">Shop</label>
+                
+                    <input type="radio" class="btn-check" name="propertyType" id="office" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="office">Office</label>
+                
+                    <input type="radio" class="btn-check" name="propertyType" id="showroom" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="showroom">Showroom</label>
+                </div>
+                  <style>
+                    .btn-group-wrap {
+                      display: flex;
+                      flex-wrap: wrap;       /* Allows wrapping */
+                      gap: 10px;   
+                      padding: 20px;          /* Space between buttons */
+                    }
+                    .btn-group-wrap .btn {
+                      flex: 1 1 150px;       /* Adjust the width as needed */
+                    }
+                  </style>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    <div class="row">
+<!-- price dropdown -->
+
+<div class="col-md-3">
+  <div class="label">
+      <label for="price-filter"  class="w-50" style="color: white;"><b>Price</b></label>
+  </div>
+  <div>
+      <select name="price-filter" id="price-filter" class="form-select">
+          <option value="">Select Price Range</option>
+          <option value="1Lakh - 3Lakh">1Lakh - 3Lakh</option>
+          <option value="3Lakh - 10Lakh">3Lakh - 10Lakh</option>
+          <option value="10Lakh - 20Lakh">10Lakh - 20Lakh</option>
+          <option value="20Lakh - 40Lakh">20Lakh - 40Lakh</option>
+          <option value="40Lakh - 70Lakh">40Lakh - 70Lakh</option>
+          <option value="70Lakh - 1Cr">70Lakh - 1Cr</option>
+          <option value="1Cr - 2Cr">1Cr - 2Cr</option>
+          <option value="2Cr - 3Cr">2Cr - 3Cr</option>
+          <option value="3Cr - 4Cr">3Cr - 4Cr</option>
+          <option value="4Cr - 5Cr">4Cr - 5Cr</option>
+      </select>
+  </div>
+</div> 
+<!-- area range drop down -->
+
+<div class="col-md-3">
+  <div class="label">
+      <label for="areaRange" style="color: white;"><b>Area Range</b></label>
+      <select id="areaRange" name="areafilter" class="form-select">
+          <option value="">Select Area Range</option>
+          <option value="3-m">3 Marla</option>
+          <option value="5-m">5 Marla</option>
+          <option value="7-m">7 Marla</option>
+          <option value="8-m">8 Marla</option>
+          <option value="10-m">10 Marla</option>
+          <option value="1-k">1 Kanal</option>
+          <option value="2-k">2 Kanal</option>
+          <option value="4-k">4 Kanal</option>
+          <option value="100sq">100 sq ft</option>
+          <option value="101-200">101-200 sq ft</option>
+          <option value="201-300">201-300 sq ft</option>
+          <option value="301-400">301-400 sq ft</option>
+          <option value="401-500">401-500 sq ft</option>
+      </select>
+  </div>
+</div>
+
+<!-- bed rooms drop down -->
+
+
+<div id="home_opt" class="col-md-3 d-flex w-50">
+  <div class="w-100" style="padding-right: 15px;">
+      <label for="bedrooms" style="color: white;"><b>Bedrooms</b></label>
+      <select class="form-control" id="bedrooms" name="roomNo">
+        <option value="">Select Bedrooms</option>
+          <option value="1">1 Room</option>
+          <option value="2">2 Rooms</option>
+          <option value="3">3 Rooms</option>
+          <option value="4">4 Rooms</option>
+          <option value="5">5 Rooms</option>
+      </select>
+  </div>
+  <div class="w-100 mb-3" style="padding-left: 15px;">
+      <label for="bathrooms"style="color: white;"><b>Bath Rooms</b></label>
+      <select class="form-control" id="bathrooms" name="broomNo">
+        <option value="">Select bathrooms</option>
+          <option value="1">1 Bath Room</option>
+          <option value="2">2 Bath Rooms</option>
+          <option value="3">3 Bath Rooms</option>
+          <option value="4">4 Bath Rooms</option>
+          <option value="5">5 Bath Rooms</option>
+      </select>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+</div>
+  
       <div class="main" >
-        <button class="btn btn-outline-primary" id="filterButton" data-toggle="modal" data-target="#filterModal">
-          <i class="fas fa-filter"></i> Select Filter
-      </button>
+    
 
       <div class="row">
         <!-- Left Column (Section for Ads) -->
-        <div class="col-12 col-md-3">
-            <section class="ads-section">
-                <h5 class="text-center">Section for Ads</h5>
-            </section>
-        </div>
+      
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-8" style="margin-left: 50px;">
         <div class="container">
           
         
@@ -625,452 +1010,6 @@
         </div>
       </div>
 
-    
-
-
-      <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title text-center" id="exampleModalToggleLabel">Filter Options</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-                <div class="modal-body">
-                    <!-- Filter Box Main Content -->
-                    <div class="filter-box-main" >
-                      <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6">
-                      <div class="filter-form">
-                        <form action="">
-                          <div>
-                            <div class="" >
-                              <div class="label">
-                                <label for=""><b>I want to</b></label>
-                              </div>
-                              <div class="px-2">
-                                <div class="form-check">
-                                    <input type="radio" name="whoAreU" class="form-check-input" id="buy">
-                                    <label for="buy" class="form-check-label">Buy</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" name="whoAreU" class="form-check-input" id="rent">
-                                    <label for="rent" class="form-check-label">Rent</label>
-                                </div>
-                            </div>
-                            
-                            </div>
-                            <div class="py-2">
-                              <div class="label">
-                                <label for=""><b>City</b></label>
-                              </div>
-                                <select class="py-2 w-100 form-select">
-                                  <option value="">--Select--</option>
-                                   <option value="	Abbottabad	">	Abbottabad	</option>
-                                  <option value="	Attock	">	Attock	</option>
-                                   <option value="	Awaran	">	Awaran	</option>
-                                   <option value="	Badin	">	Badin	</option>
-                                   <option value="	Bagh	">	Bagh	</option>
-                                   <option value="	Bahawalpur	">	Bahawalpur	</option>
-                                   <option value="	Bannu	">	Bannu	</option>
-                                   <option value="	Battagram	">	Battagram	</option>
-                                   <option value="	Bhakkar	">	Bhakkar	</option>
-                                   <option value="	Bhimber	">	Bhimber	</option>
-                                   <option value="	Chakwal	">	Chakwal	</option>
-                                   <option value="	Chaman	">	Chaman	</option>
-                                   <option value="	Charsadda	">	Charsadda	</option>
-                                   <option value="	Chiniot	">	Chiniot	</option>
-                                   <option value="	Dadu	">	Dadu	</option>
-                                   <option value="	Dera Ghazi Khan	">	Dera Ghazi Khan	</option>
-                                   <option value="	Dera Ismail Khan	">	Dera Ismail Khan	</option>
-                                   <option value="	Dera Murad Jamali	">	Dera Murad Jamali	</option>
-                                   <option value="	Diamer (Chilas)	">	Diamer (Chilas)	</option>
-                                   <option value="	Faisalabad	">	Faisalabad	</option>
-                                   <option value="	Ghanche	">	Ghanche	</option>
-                                   <option value="	Ghizer	">	Ghizer	</option>
-                                   <option value="	Ghotki	">	Ghotki	</option>
-                                   <option value="	Gilgit	">	Gilgit	</option>
-                                   <option value="	Gujranwala	">	Gujranwala	</option>
-                                   <option value="	Gujrat	">	Gujrat	</option>
-                                   <option value="	Gwadar	">	Gwadar	</option>
-                                   <option value="	Hafizabad	">	Hafizabad	</option>
-                                   <option value="	Hangu	">	Hangu	</option>
-                                   <option value="	Haripur	">	Haripur	</option>
-                                   <option value="	Haveli	">	Haveli	</option>
-                                   <option value="	Hub	">	Hub	</option>
-                                   <option value="	Hunza	">	Hunza	</option>
-                                   <option value="	Hyderabad	">	Hyderabad	</option>
-                                   <option value="	Islamabad	">	Islamabad	</option>
-                                   <option value="	Jacobabad	">	Jacobabad	</option>
-                                   <option value="	Jaffarabad	">	Jaffarabad	</option>
-                                   <option value="	Jamshoro	">	Jamshoro	</option>
-                                   <option value="	Jhelum	">	Jhelum	</option>
-                                   <option value="	Kalat	">	Kalat	</option>
-                                   <option value="	Karachi	">	Karachi	</option>
-                                   <option value="	Karak	">	Karak	</option>
-                                   <option value="	Kashmore	">	Kashmore	</option>
-                                   <option value="	Kasur	">	Kasur	</option>
-                                   <option value="	Kech	">	Kech	</option>
-                                   <option value="	Khairpur	">	Khairpur	</option>
-                                   <option value="	Khanewal	">	Khanewal	</option>
-                                   <option value="	Kharan	">	Kharan	</option>
-                                   <option value="	Khushab	">	Khushab	</option>
-                                   <option value="	Khuzdar	">	Khuzdar	</option>
-                                   <option value="	Kohat	">	Kohat	</option>
-                                   <option value="	Kohistan	">	Kohistan	</option>
-                                   <option value="	Kotli	">	Kotli	</option>
-                                   <option value="	Lahore	">	Lahore	</option>
-                                   <option value="	Lakki Marwat	">	Lakki Marwat	</option>
-                                   <option value="	Larkana	">	Larkana	</option>
-                                   <option value="	Lasbela	">	Lasbela	</option>
-                                   <option value="	Layyah	">	Layyah	</option>
-                                   <option value="	Lodhran	">	Lodhran	</option>
-                                   <option value="	Loralai	">	Loralai	</option>
-                                   <option value="	Lower Dir (Timergara)	">	Lower Dir (Timergara)	</option>
-                                   <option value="	Malakand	">	Malakand	</option>
-                                   <option value="	Mansehra	">	Mansehra	</option>
-                                   <option value="	Mardan	">	Mardan	</option>
-                                   <option value="	Mastung	">	Mastung	</option>
-                                   <option value="	Matiari	">	Matiari	</option>
-                                   <option value="	Mianwali	">	Mianwali	</option>
-                                   <option value="	Mirpur	">	Mirpur	</option>
-                                   <option value="	Mirpur Khas	">	Mirpur Khas	</option>
-                                   <option value="	Multan	">	Multan	</option>
-                                   <option value="	Muzaffarabad	">	Muzaffarabad	</option>
-                                   <option value="	Muzaffargarh	">	Muzaffargarh	</option>
-                                   <option value="	Nagar	">	Nagar	</option>
-                                   <option value="	Narowal	">	Narowal	</option>
-                                   <option value="	Naseerabad	">	Naseerabad	</option>
-                                   <option value="	Naushahro Feroze	">	Naushahro Feroze	</option>
-                                   <option value="	Nawabshah (Shaheed Benazirabad)	">	Nawabshah (Shaheed Benazirabad)	</option>
-                                   <option value="	Neelum	">	Neelum	</option>
-                                   <option value="	Nowshera	">	Nowshera	</option>
-                                   <option value="	Okara	">	Okara	</option>
-                                   <option value="	Pakpattan	">	Pakpattan	</option>
-                                   <option value="	Panjgur	">	Panjgur	</option>
-                                   <option value="	Peshawar	">	Peshawar	</option>
-                                   <option value="	Pishin	">	Pishin	</option>
-                                   <option value="	Quetta	">	Quetta	</option>
-                                   <option value="	Rahim Yar Khan	">	Rahim Yar Khan	</option>
-                                   <option value="	Rajanpur	">	Rajanpur	</option>
-                                   <option value="	Rawalakot	">	Rawalakot	</option>
-                                   <option value="	Rawalpindi	">	Rawalpindi	</option>
-                                   <option value="	Sahiwal	">	Sahiwal	</option>
-                                   <option value="	Sanghar	">	Sanghar	</option>
-                                   <option value="	Sargodha	">	Sargodha	</option>
-                                   <option value="	Shangla	">	Shangla	</option>
-                                   <option value="	Sheikhupura	">	Sheikhupura	</option>
-                                   <option value="	Shigar	">	Shigar	</option>
-                                   <option value="	Shikarpur	">	Shikarpur	</option>
-                                   <option value="	Sialkot	">	Sialkot	</option>
-                                   <option value="	Sibi	">	Sibi	</option>
-                                   <option value="	Skardu	">	Skardu	</option>
-                                   <option value="	Sudhanoti	">	Sudhanoti	</option>
-                                   <option value="	Sukkur	">	Sukkur	</option>
-                                   <option value="	Swabi	">	Swabi	</option>
-                                   <option value="	Swat (Mingora)	">	Swat (Mingora)	</option>
-                                   <option value="	Tando Allahyar	">	Tando Allahyar	</option>
-                                   <option value="	Tando Muhammad Khan	">	Tando Muhammad Khan	</option>
-                                   <option value="	Tank	">	Tank	</option>
-                                   <option value="	Tharparkar	">	Tharparkar	</option>
-                                   <option value="	Thatta	">	Thatta	</option>
-                                   <option value="	Toba Tek Singh	">	Toba Tek Singh	</option>
-                                   <option value="	Torghar	">	Torghar	</option>
-                                   <option value="	Turbat	">	Turbat	</option>
-                                   <option value="	Umerkot	">	Umerkot	</option>
-                                   <option value="	Upper Dir	">	Upper Dir	</option>
-                                   <option value="	Vehari	">	Vehari	</option>
-                                   <option value="	Zhob	">	Zhob	</option>
-                                   <option value="	Ziarat	">	Ziarat	</option>
-                  
-                                </select>
-                            </div>
-                           
-                            <div class="py-2">
-                              <div class="label">
-                                <label for=""><b>Property Type</b></label>
-                              </div>
-                              <div class="accordion accordion-flush" id="accordionFlushExample">
-                                <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-toggle="collapse"  data-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                      Homes
-                                    </button>
-                                  </h2>
-                                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-parent="#accordionFlushExample">
-                                    <div>
-                                        <input type="radio" name="homefilter" id="house" class="form-check-input" onchange="home_opt()">
-                                        <label for="house" class="p-1">House</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" id="Flat" class="form-check-input" onchange="home_opt()">
-                                        <label for="Flat" class="p-1">Flat</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" id="UpperPortion" class="form-check-input" onchange="home_opt()">
-                                        <label for="UpperPortion" class="p-1">Upper Portion</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" id="LowerPortion" class="form-check-input" onchange="home_opt()">
-                                        <label for="LowerPortion" class="p-1">Lower Portion</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" id="FarmHouse" class="form-check-input" onchange="home_opt()">
-                                        <label for="FarmHouse" class="p-1">Farm House</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" id="room" class="form-check-input" onchange="home_opt()">
-                                        <label for="room" class="p-1">Room</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" id="Penthouse" class="form-check-input" onchange="home_opt()">
-                                        <label for="Penthouse" class="p-1">Penthouse</label>
-                                      </div>
-                                  </div>
-                                </div>
-                                <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                      Plots
-                                    </button>
-                                  </h2>
-                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-parent="#accordionFlushExample">
-                                     <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="RP">
-                                        <label for="RP" class="p-1">Residential Plot</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="CP">
-                                        <label for="CP" class="p-1">Commercial Plot</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="AgriculturalLand">
-                                        <label for="AgriculturalLand" class="p-1">Agricultural Land</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="IndustrialLand">
-                                        <label for="IndustrialLand" class="p-1">Industrial Land</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="PlotFile">
-                                        <label for="PlotFile" class="p-1">Plot File</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="PlotForm">
-                                        <label for="PlotForm" class="p-1">Plot Form</label>
-                                      </div>  
-                                  </div>
-                                </div>
-                                <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                     Commercial
-                                    </button>
-                                  </h2>
-                                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-parent="#accordionFlushExample">
-                                   <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="Office">
-                                        <label for="Office" class="p-1">Office</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="Shop">
-                                        <label for="Shop" class="p-1">Shop</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="Warehouse">
-                                        <label for="Warehouse" class="p-1">Warehouse</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="Factory">
-                                        <label for="Factory" class="p-1">Factory</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="Building">
-                                        <label for="Building" class="p-1">Building</label>
-                                      </div>
-                                      <div>
-                                        <input type="radio" name="homefilter" class="form-check-input" id="Other">
-                                        <label for="Other" class="p-1">Other</label>
-                                      </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                         
-                       
-                            <div id="home_opt">
-                              <div class="py-2">
-                                <div class="label">
-                                  <label for=""><b> Bed Rooms</b></label>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r1">
-                                    <label for="r1" class="p-1 ">1 Room</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r2">
-                                    <label for="r2" class="p-1 ">2 Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r3">
-                                    <label for="r3" class="p-1 ">3 Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r4">
-                                    <label for="r4" class="p-1 ">4 Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r5">
-                                    <label for="r5" class="p-1 ">5 Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r6">
-                                    <label for="r6" class="p-1 ">6 Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r7">
-                                    <label for="r7" class="p-1 ">7 Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r8">
-                                    <label for="r8" class="p-1 ">8 Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r9">
-                                    <label for="r9" class="p-1 ">9 Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r10">
-                                    <label for="r10" class="p-1 ">10 Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="roomNo" class="form-check-input" id="r10+">
-                                    <label for="r10+" class="p-1 ">10+ Rooms</label>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="py-2">
-                                <div class="label">
-                                  <label for=""><b> Bath Rooms</b></label>
-                                  <div>
-                                    <input type="radio" name="broomNo" class="form-check-input" id="br1">
-                                    <label for="br1" class="p-1 ">1 Bath Room</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="broomNo" class="form-check-input" id="br2">
-                                    <label for="br2" class="p-1 ">2 Bath Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="broomNo" class="form-check-input" id="br3">
-                                    <label for="br3" class="p-1 ">3 Bath Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="broomNo" class="form-check-input" id="br4">
-                                    <label for="br4" class="p-1 ">4 Bath Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="broomNo" class="form-check-input" id="br5">
-                                    <label for="br5" class="p-1 ">5 Bath Rooms</label>
-                                  </div>
-                                  <div>
-                                    <input type="radio" name="broomNo" class="form-check-input" id="br5+">
-                                    <label for="br5+" class="p-1 ">5+ Bath Rooms</label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-        
-                            
-                          </div>
-                        </form>
-        
-                      </div>
-                      
-                    </div>
-                    <div class="col-md-6">
-                      <!-- Column 2 content goes here -->
-                      <div class="hidden_class">
-                        <div class="label">
-                            <label for=""><b>I want to</b></label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="whoAreU" class="form-check-input" id="buy">
-                            <label for="buy" class="form-check-label">Buy</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="whoAreU" class="form-check-input" id="rent">
-                            <label for="rent" class="form-check-label">Rent</label>
-                        </div>
-                    </div>
-                 
-                      <div class="py-2">
-                        <div class="label">
-                          <label for=""><b>Location</b></label>
-                        </div>
-                        <input type="text" class="w-100 form-control" placeholder="Enter Location" >
-                      </div>
-
-
-
-                      <div class="py-2">
-                        <div class="label">
-                            <label for="price-filter" class="w-50"><b>Price</b></label>
-                        </div>
-                        <div>
-                            <select name="price-filter" id="price-filter" class="form-select">
-                                <option value="">Select Price Range</option>
-                                <option value="1Lakh - 3Lakh">1Lakh - 3Lakh</option>
-                                <option value="3Lakh - 10Lakh">3Lakh - 10Lakh</option>
-                                <option value="10Lakh - 20Lakh">10Lakh - 20Lakh</option>
-                                <option value="20Lakh - 40Lakh">20Lakh - 40Lakh</option>
-                                <option value="40Lakh - 70Lakh">40Lakh - 70Lakh</option>
-                                <option value="70Lakh - 1Cr">70Lakh - 1Cr</option>
-                                <option value="1Cr - 2Cr">1Cr - 2Cr</option>
-                                <option value="2Cr - 3Cr">2Cr - 3Cr</option>
-                                <option value="3Cr - 4Cr">3Cr - 4Cr</option>
-                                <option value="4Cr - 5Cr">4Cr - 5Cr</option>
-                            </select>
-                        </div>
-                    </div> 
-
-
-                    <div class="py-2">
-                      <div class="label">
-                          <label for="areaRange"><b>Area Range</b></label>
-                          <select id="areaRange" name="areafilter" class="form-select">
-                              <option value="">Select Area Range</option>
-                              <option value="3-m">3 Marla</option>
-                              <option value="5-m">5 Marla</option>
-                              <option value="7-m">7 Marla</option>
-                              <option value="8-m">8 Marla</option>
-                              <option value="10-m">10 Marla</option>
-                              <option value="1-k">1 Kanal</option>
-                              <option value="2-k">2 Kanal</option>
-                              <option value="4-k">4 Kanal</option>
-                              <option value="100sq">100 sq ft</option>
-                              <option value="101-200">101-200 sq ft</option>
-                              <option value="201-300">201-300 sq ft</option>
-                              <option value="301-400">301-400 sq ft</option>
-                              <option value="401-500">401-500 sq ft</option>
-                          </select>
-                      </div>
-                  </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Apply Filters</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
       <footer>
         <div class="footer">
           <div class="container d-block d-md-flex d-lg-flex">
@@ -1124,5 +1063,24 @@
         </div>
     
       </footer>
+      <script>
+
+
+        // Function to toggle visibility of div2
+        function toggleDiv() {
+    const div2 = document.getElementById('div2');
+    const selectPropertyText = document.getElementById('selectPropertyText');
+
+    // Toggle display of div2
+    div2.style.display = div2.style.display === 'none' ? 'block' : 'none';
+
+    // Toggle visibility of "Select Property" text
+    selectPropertyText.style.display = selectPropertyText.style.display === 'none' ? 'inline' : 'none';
+}
+
+  
+
+        
+      </script>
 </body>
 </html>
