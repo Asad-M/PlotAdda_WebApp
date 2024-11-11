@@ -164,6 +164,7 @@ a {
 }
 .project_wrapper{
   background: #EAF3FD;
+  border-radius: 20px;
 }
 .trending{
   font-size: 16px;
@@ -433,20 +434,61 @@ form .checkbox {
       justify-content: center;
       margin-top: 20px;
        margin-bottom: 20px;
+      
      
     }
 
     .swiper-slide .card {
-      width: 18rem;
-      margin: 10 10px;
+      width: 328px;
+      margin: 10px;
       border: 1px solid #ddd;
       border-radius: 8px;
       transition: box-shadow 0.3s ease;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Initial shadow */
-    }
+  }
+  
+    .img-holder img {
+      width: 100%; /* Ensures the image fills the width of the card */
+      height: auto; /* Adjusts height proportionally */
+      object-fit: cover; /* Ensures the image covers the area without stretching */
+  }
 
     /* Card hover effect */
     .swiper-slide .card:hover {
       box-shadow: 0px 0px 15px 5px rgba(40, 167, 69, 0.5); /* Green shadow */
     }
    
+    /* General Styles for Titles */
+.title {
+  font-size: 1.1em;
+  
+}
+
+/* Price Range: Bold and Larger */
+.price-range {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #2c3e50;
+}
+
+/* Location: Italicized and Muted */
+.location {
+  font-style: italic;
+  color: #34495e;
+}
+
+/* Location Information: Muted Color */
+.location-info {
+  color: #7f8c8d;
+}
+
+/* Property Type: Bold and Color Accent */
+.property-type {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Area Range: Default but slightly larger font size */
+.area-range {
+  font-size: 1.1em;
+}
