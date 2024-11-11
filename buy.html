@@ -727,13 +727,22 @@
                   <!-- Property Types for Plots -->
                   <div class="btn-group-wrap">
                     <input type="radio" class="btn-check" name="plotType" id="plotType1" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="plotType1">Plot Type 1</label>
+                    <label class="btn btn-outline-primary" for="plotType1">Residential Plot</label>
                 
                     <input type="radio" class="btn-check" name="plotType" id="plotType2" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="plotType2">Plot Type 2</label>
+                    <label class="btn btn-outline-primary" for="plotType2">Commercial Plot</label>
                 
                     <input type="radio" class="btn-check" name="plotType" id="plotType3" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="plotType3">Plot Type 3</label>
+                    <label class="btn btn-outline-primary" for="plotType3">Agriculture Land</label>
+
+                    <input type="radio" class="btn-check" name="plotType" id="plotType4" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="plotType4">Industrial Land</label>
+
+                    <input type="radio" class="btn-check" name="plotType" id="plotType5" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="plotType5">Plot File</label>
+
+                    <input type="radio" class="btn-check" name="plotType" id="plotType6" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="plotType6">Plot Form</label>
                 </div>
                 
                 </div>
@@ -747,7 +756,15 @@
                     <label class="btn btn-outline-primary" for="office">Office</label>
                 
                     <input type="radio" class="btn-check" name="propertyType" id="showroom" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="showroom">Showroom</label>
+                    <label class="btn btn-outline-primary" for="showroom">WareHouse</label>
+                    <input type="radio" class="btn-check" name="propertyType" id="showroom1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="showroom1">Factory</label>
+
+                    <input type="radio" class="btn-check" name="propertyType" id="showroom2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="showroom2">Building</label>
+
+                    <input type="radio" class="btn-check" name="propertyType" id="showroom3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="showroom3">Other</label>
                 </div>
                   <style>
                     .btn-group-wrap {
@@ -770,25 +787,96 @@
 <!-- price dropdown -->
 
 <div class="col-md-3">
-  <div class="label">
-      <label for="price-filter"  class="w-50" style="color: white;"><b>Price</b></label>
+  <div class="label_price">
+      <label for="min-price" style="color: white;"><b>Price</b></label>
   </div>
-  <div>
-      <select name="price-filter" id="price-filter" class="form-select">
-          <option value="">Select Price Range</option>
-          <option value="1Lakh - 3Lakh">1Lakh - 3Lakh</option>
-          <option value="3Lakh - 10Lakh">3Lakh - 10Lakh</option>
-          <option value="10Lakh - 20Lakh">10Lakh - 20Lakh</option>
-          <option value="20Lakh - 40Lakh">20Lakh - 40Lakh</option>
-          <option value="40Lakh - 70Lakh">40Lakh - 70Lakh</option>
-          <option value="70Lakh - 1Cr">70Lakh - 1Cr</option>
-          <option value="1Cr - 2Cr">1Cr - 2Cr</option>
-          <option value="2Cr - 3Cr">2Cr - 3Cr</option>
-          <option value="3Cr - 4Cr">3Cr - 4Cr</option>
-          <option value="4Cr - 5Cr">4Cr - 5Cr</option>
-      </select>
+
+  <!-- Display Selected Price Range -->
+  <div style="position: relative;">
+  <div id="price_div">
+      <h6 class="priceTxt">0 to Any</h6>
   </div>
-</div> 
+
+  <!-- Dropdowns for Price Selection (Initially Hidden) -->
+  <div id="price-range-dropdown" class="d-flex_price" style="display: none; background-color: white; border-radius: 5px; padding: 10px; position: absolute; z-index: 3;border: 1px solid #111111;">
+      <div class="price-input">
+          <label>Min:</label>
+          <div class="btn-group-wrap">
+              <input type="radio" class="btn-check" name="min-price" id="min-value1" value="0" checked>
+              <label class="btn btn-outline-primary" for="min-value1">0</label>
+          
+              <input type="radio" class="btn-check" name="min-price" id="min-value2" value="500000">
+              <label class="btn btn-outline-primary" for="min-value2">500,000</label>
+          
+              <input type="radio" class="btn-check" name="min-price" id="min-value3" value="1000000">
+              <label class="btn btn-outline-primary" for="min-value3">1,000,000</label>
+          
+              <input type="radio" class="btn-check" name="min-price" id="min-value4" value="2000000">
+              <label class="btn btn-outline-primary" for="min-value4">2,000,000</label>
+          
+              <input type="radio" class="btn-check" name="min-price" id="min-value5" value="5000000">
+              <label class="btn btn-outline-primary" for="min-value5">5,000,000</label>
+          </div>
+      </div>
+
+      <div class="price-input">
+          <label>Max:</label>
+          <div class="btn-group-wrap">
+              <input type="radio" class="btn-check" name="max-price" id="max-value1" value="any" checked>
+              <label class="btn btn-outline-primary" for="max-value1">Any</label>
+          
+              <input type="radio" class="btn-check" name="max-price" id="max-value2" value="500000">
+              <label class="btn btn-outline-primary" for="max-value2">500,000</label>
+          
+              <input type="radio" class="btn-check" name="max-price" id="max-value3" value="1000000">
+              <label class="btn btn-outline-primary" for="max-value3">1,000,000</label>
+          
+              <input type="radio" class="btn-check" name="max-price" id="max-value4" value="2000000">
+              <label class="btn btn-outline-primary" for="max-value4">2,000,000</label>
+          
+              <input type="radio" class="btn-check" name="max-price" id="max-value5" value="5000000">
+              <label class="btn btn-outline-primary" for="max-value5">5,000,000</label>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+<script>
+  // JavaScript for Toggle and Update
+  const priceDiv = document.getElementById('price_div');
+  const dropdown = document.getElementById('price-range-dropdown');
+  const priceTxt = document.querySelector('.priceTxt');
+
+  // Initial values for min and max prices
+  let minPrice = "0";
+  let maxPrice = "Any";
+
+  // Set initial text in priceTxt
+  priceTxt.textContent = `${minPrice} to ${maxPrice}`;
+
+  // Toggle visibility of the dropdown when priceDiv is clicked
+  priceDiv.addEventListener('click', function() {
+      dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
+  });
+
+  // Update the selected minPrice when a radio button is clicked
+  document.querySelectorAll('input[name="min-price"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+          minPrice = this.value;
+          priceTxt.textContent = `${minPrice} to ${maxPrice}`;
+      });
+  });
+
+  // Update the selected maxPrice when a radio button is clicked
+  document.querySelectorAll('input[name="max-price"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+          maxPrice = this.value;
+          priceTxt.textContent = `${minPrice} to ${maxPrice}`;
+      });
+  });
+</script>
+
 <!-- area range drop down -->
 
 <div class="col-md-3">
@@ -816,7 +904,7 @@
 <!-- bed rooms drop down -->
 
 
-<div id="home_opt" class="col-md-3 d-flex w-50">
+<div id="home_opt" class="col-md-3 d-flex w-50" style="background-color:transparent;">
   <div class="w-100" style="padding-right: 15px;">
       <label for="bedrooms" style="color: white;"><b>Bedrooms</b></label>
       <select class="form-control" id="bedrooms" name="roomNo">
@@ -885,14 +973,21 @@
                       <div class="row_class w-50">
                         <!-- Card Body Section -->
                         <div class="card-body">
-                            <h5>Rs: 4,500,000</h5>
-                            <h6>Johar Town Phase 2-Bloack L,</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p>Property owner details</p>
-                        </div>
+                          <h5>Rs: 4,500,000</h5>
+                          <h6>Johar Town Phase 2 - Block L</h6>
+                          <p><strong>Property Details:</strong></p>
+                          <p>
+                              <i class="fa fa-bed"></i> 7 Beds
+                              <i class="fa fa-shower" style="margin-left: 10px;"></i> 5 Baths
+                              <i class="fa fa-ruler-vertical" style="margin-left: 10px;"></i> 3000 Sq Ft
+                          </p>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p>Property owner details</p>
+                      </div>
+                      
                     
                         <!-- Buttons Section Below Content -->
-                        <div class="btn-container p-3">
+                        <div class="btn-container p-9">
                             <a href="mailto:example@example.com" class="btn btn-outline-success">
                                 <i class="fas fa-envelope"></i>
                             </a>
@@ -928,14 +1023,21 @@
                       <div class="row_class w-50">
                         <!-- Card Body Section -->
                         <div class="card-body">
-                            <h5>Rs: 4,500,000</h5>
-                            <h6>Johar Town Phase 2-Bloack L,</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p>Property owner details</p>
-                        </div>
+                          <h5>Rs: 4,500,000</h5>
+                          <h6>Johar Town Phase 2 - Block L</h6>
+                          <p><strong>Property Details:</strong></p>
+                          <p>
+                              <i class="fa fa-bed"></i> 7 Beds
+                              <i class="fa fa-shower" style="margin-left: 10px;"></i> 5 Baths
+                              <i class="fa fa-ruler-vertical" style="margin-left: 10px;"></i> 3000 Sq Ft
+                          </p>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p>Property owner details</p>
+                      </div>
+                      
                     
                         <!-- Buttons Section Below Content -->
-                        <div class="btn-container p-3">
+                        <div class="btn-container p-9">
                             <a href="mailto:example@example.com" class="btn btn-outline-success">
                                 <i class="fas fa-envelope"></i>
                             </a>
@@ -970,14 +1072,21 @@
                       <div class="row_class w-50">
                         <!-- Card Body Section -->
                         <div class="card-body">
-                            <h5>Rs: 4,500,000</h5>
-                            <h6>Johar Town Phase 2-Bloack L,</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <p>Property owner details</p>
-                        </div>
+                          <h5>Rs: 4,500,000</h5>
+                          <h6>Johar Town Phase 2 - Block L</h6>
+                          <p><strong>Property Details:</strong></p>
+                          <p>
+                              <i class="fa fa-bed"></i> 7 Beds
+                              <i class="fa fa-shower" style="margin-left: 10px;"></i> 5 Baths
+                              <i class="fa fa-ruler-vertical" style="margin-left: 10px;"></i> 3000 Sq Ft
+                          </p>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p>Property owner details</p>
+                      </div>
+                      
                     
                         <!-- Buttons Section Below Content -->
-                        <div class="btn-container p-3">
+                        <div class="btn-container p-9">
                             <a href="mailto:example@example.com" class="btn btn-outline-success">
                                 <i class="fas fa-envelope"></i>
                             </a>
