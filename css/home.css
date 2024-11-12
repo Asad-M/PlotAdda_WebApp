@@ -76,6 +76,8 @@
 }
 .card{
 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+border-radius: 2.75rem;
+border:  2px solid rgb(18, 101, 18);
 }
 .card-container img{
   align-items: center;
@@ -197,7 +199,8 @@ a {
   flex-direction: column; /* Align content vertically */
   justify-content: center; /* Centers content vertically */
   align-items: center; /* Centers content horizontally */
-  
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adjust values as needed */
+  border-radius: 8px; /* Optional: smooth edges */
   margin: 0 auto; /* Centers the box horizontally in its container */
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
@@ -211,7 +214,8 @@ a {
   border: 2px solid #ccc; /* Adds a border */
   height: 300px; /* Set height */
   width: 400px; /* Set width */
-  
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adjust values as needed */
+  border-radius: 8px; /* Optional: smooth edges */
   display: flex; /* Enables flexbox */
   justify-content: center; /* Centers the image horizontally */
   align-items: center; /* Centers the image vertically */
@@ -441,7 +445,7 @@ form .checkbox {
     .swiper-slide .card {
       width: 328px;
       margin: 10px;
-      border: 1px solid #ddd;
+      border: 2px solid #ddd;
       border-radius: 8px;
       transition: box-shadow 0.3s ease;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Initial shadow */
@@ -456,6 +460,7 @@ form .checkbox {
     /* Card hover effect */
     .swiper-slide .card:hover {
       box-shadow: 0px 0px 15px 5px rgba(40, 167, 69, 0.5); /* Green shadow */
+      border-color: #13A137;
     }
    
     /* General Styles for Titles */
@@ -491,4 +496,12 @@ form .checkbox {
 /* Area Range: Default but slightly larger font size */
 .area-range {
   font-size: 1.1em;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgb(39, 39, 39); /* Changes the arrow icon color to black */
+    border-radius: 50%; /* Optional: makes the icons round */
+    width: 40px; /* Optional: adjust size */
+    height: 40px;
+   
 }
