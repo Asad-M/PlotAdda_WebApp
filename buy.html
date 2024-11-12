@@ -777,9 +777,9 @@
                   <style>
                     .btn-group-wrap {
                       display: flex;
-                      flex-wrap: wrap;       /* Allows wrapping */
-                      gap: 10px;   
-                      padding: 20px;          /* Space between buttons */
+                      flex-wrap: wrap;       /* Allows wrapping */                  
+                      padding: 10px;          /* Space between buttons */
+                      
                     }
                     .btn-group-wrap .btn {
                       flex: 1 1 150px;       /* Adjust the width as needed */
@@ -810,7 +810,7 @@
       <div class="price-input">
           <label>Min:</label>
           <input type="text" class="styled-input_price_min" placeholder="0">
-          <div class="btn-group-wrap">
+          <div class="btn-group-wrap_price">
               <input type="radio" class="btn-check" name="min-price" id="min-value1" value="0" checked>
               <label class="btn btn-outline-primary" for="min-value1">0</label>
           
@@ -831,7 +831,7 @@
       <div class="price-input">
           <label>Max:</label>
           <input type="text" class="styled-input_price_Max" placeholder="Any">
-          <div class="btn-group-wrap">
+          <div class="btn-group-wrap_price">
               <input type="radio" class="btn-check" name="max-price" id="max-value1" value="any" checked>
               <label class="btn btn-outline-primary" for="max-value1">Any</label>
           
@@ -878,6 +878,7 @@
       radio.addEventListener('change', function() {
           minPrice = this.value;
           priceTxt.textContent = `${minPrice} to ${maxPrice}`;
+          minPrizeInputBox.value = minPrice;
       });
   });
 
@@ -886,7 +887,7 @@
       radio.addEventListener('change', function() {
           maxPrice = this.value;
           priceTxt.textContent = `${minPrice} to ${maxPrice}`;
-          minPrizeInputBox.value = minPrice;
+         
           maxPrizeInputBox.value=maxPrice;
       });
   });
