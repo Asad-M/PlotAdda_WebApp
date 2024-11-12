@@ -461,11 +461,13 @@
       <h1 class="text-center">  P L O T S A D D A </h1>
     </div> -->
   </header>
-  <div class="content-container1" style="background-color: rgba(0, 0, 0, 0.8); padding: 5px 30px; margin: 5px 30px;" >
+  <div class="content-container1" style="background-color: rgba(0, 0, 0, 0.8); padding: 5px 30px;  position: fixed; top: 73px; left: 0; width: 100%; z-index: 999;">
+
+
     <div class="row">
       
 <!-- Buy and rent drop dropdown -->
-<div class="col-md-3">
+<div class="filter_div col-md-3"  >
         <div class="label">
           <label for="" style="color: white;"><b>I want to</b></label>
         </div>
@@ -483,9 +485,9 @@
 
 
 
-          <div class="col-md-3">
+          <div class="filter_div col-md-3">
             <div class="label">
-              <label for="" style="color: white;"><b>City</b></label>
+              <label for="" ><b>City</b></label>
             </div>
               <select class="py-2 w-100">
                 <option value="">--Select--</option>
@@ -611,14 +613,14 @@
 
 
           <!-- Location dropdown -->
-          <div class="col-md-3">
+          <div class=" filter_div col-md-3">
             <div class="label">
               <label for="" style="color: white;"><b>Location</b></label>
             </div>
             <input type="text" class="w-100 form-control" placeholder="Enter Location" >
           </div>
             
-          <div class="col-md-3">
+          <div class="filter_div col-md-3">
             <div class="label">
                 <label for="" style="color: white;"><b>Property Type</b></label>
             </div>
@@ -680,15 +682,21 @@
 
 
   // Function to toggle visibility of div2
-  function toggleDiv() {
-    const div2 = document.getElementById('div2');
-    if (div2.style.display === 'none') {
-      div2.style.display = 'block';  // Show div2
-    } else {
-      div2.style.display = 'none';   // Hide div2
-    }
+
+  function updatePropertyType(type) {
+    document.querySelector('.propertyTypeTxt').textContent = type;
+   // Optionally close the dropdown after selecting
   }
 
+  
+  function toggleDiv() {
+    var div = document.getElementById('div2');
+    if (div !== null) {
+        div.style.display = (div.style.display === 'none') ? 'block' : 'none';
+    } else {
+        console.error('Element not found');
+    }
+}
 
 
   
@@ -786,7 +794,7 @@
     <div class="row">
 <!-- price dropdown -->
 
-<div class="col-md-3">
+<div class="filter_div col-md-3">
   <div class="label_price">
       <label for="min-price" style="color: white;"><b>Price</b></label>
   </div>
@@ -798,9 +806,10 @@
   </div>
 
   <!-- Dropdowns for Price Selection (Initially Hidden) -->
-  <div id="price-range-dropdown" class="d-flex_price" style="display: none; background-color: white; border-radius: 5px; padding: 10px; position: absolute; z-index: 3;border: 1px solid #111111;">
+  <div id="price-range-dropdown" class="d-flex_price" style="display: none; height: 336; background-color: white; border-radius: 5px; padding: 10px; position: absolute; z-index: 3;border: 1px solid #111111;">
       <div class="price-input">
           <label>Min:</label>
+          <input type="text" class="styled-input_price_min" placeholder="0">
           <div class="btn-group-wrap">
               <input type="radio" class="btn-check" name="min-price" id="min-value1" value="0" checked>
               <label class="btn btn-outline-primary" for="min-value1">0</label>
@@ -821,6 +830,7 @@
 
       <div class="price-input">
           <label>Max:</label>
+          <input type="text" class="styled-input_price_Max" placeholder="Any">
           <div class="btn-group-wrap">
               <input type="radio" class="btn-check" name="max-price" id="max-value1" value="any" checked>
               <label class="btn btn-outline-primary" for="max-value1">Any</label>
@@ -847,6 +857,8 @@
   const priceDiv = document.getElementById('price_div');
   const dropdown = document.getElementById('price-range-dropdown');
   const priceTxt = document.querySelector('.priceTxt');
+  const minPrizeInputBox = document.querySelector('.styled-input_price_min');
+  const maxPrizeInputBox = document.querySelector('.styled-input_price_Max');
 
   // Initial values for min and max prices
   let minPrice = "0";
@@ -854,7 +866,8 @@
 
   // Set initial text in priceTxt
   priceTxt.textContent = `${minPrice} to ${maxPrice}`;
-
+  minPrizeInputBox.value = minPrice;
+  maxPrizeInputBox.value=maxPrice;
   // Toggle visibility of the dropdown when priceDiv is clicked
   priceDiv.addEventListener('click', function() {
       dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'none';
@@ -873,13 +886,15 @@
       radio.addEventListener('change', function() {
           maxPrice = this.value;
           priceTxt.textContent = `${minPrice} to ${maxPrice}`;
+          minPrizeInputBox.value = minPrice;
+          maxPrizeInputBox.value=maxPrice;
       });
   });
 </script>
 
 <!-- area range drop down -->
 
-<div class="col-md-3">
+<div class="filter_div col-md-3">
   <div class="label">
       <label for="areaRange" style="color: white;"><b>Area Range</b></label>
       <select id="areaRange" name="areafilter" class="form-select">
@@ -905,7 +920,7 @@
 
 
 <div id="home_opt" class="col-md-3 d-flex w-50" style="background-color:transparent;">
-  <div class="w-100" style="padding-right: 15px;">
+  <div class="filter_div w-100 mb-3" style="padding-right: 15px;">
       <label for="bedrooms" style="color: white;"><b>Bedrooms</b></label>
       <select class="form-control" id="bedrooms" name="roomNo">
         <option value="">Select Bedrooms</option>
@@ -916,7 +931,7 @@
           <option value="5">5 Rooms</option>
       </select>
   </div>
-  <div class="w-100 mb-3" style="padding-left: 15px;">
+  <div class=" filter_div w-100 mb-3" style="padding-left: 15px;">
       <label for="bathrooms"style="color: white;"><b>Bath Rooms</b></label>
       <select class="form-control" id="bathrooms" name="broomNo">
         <option value="">Select bathrooms</option>
@@ -936,7 +951,10 @@
     </div>
 </div>
   
-      <div class="main" >
+
+
+
+<div class="main" style=" margin-top: 230px;">
     
 
       <div class="row">
@@ -957,6 +975,10 @@
                       <span class="px-2 bg-danger text-light hot">HOT</span>
                       <div class="image-container  w-50">
                         <img class="card-img-top  w-100" src="./assets/2.jpg" alt="Card image cap">
+                        <div class="icon-text">
+                          <i class="fa fa-camera"></i> <span  class="mr-2 ms-1">28</span>
+                      </div>
+
                         <div class="icon-container">
                           <button class="icon-btn">
                             <i class="fa fa-heart"></i>
@@ -1007,6 +1029,9 @@
                       <span class="px-2 bg-danger text-light hot">HOT</span>
                       <div class="image-container  w-50">
                         <img class="card-img-top  w-100" src="./assets/2.jpg" alt="Card image cap">
+                        <div class="icon-text">
+                          <i class="fa fa-camera"></i> <span  class="mr-2 ms-1">28</span>
+                      </div>
                         <div class="icon-container">
                           <button class="icon-btn">
                             <i class="fa fa-heart"></i>
@@ -1056,6 +1081,9 @@
                       <span class="px-2 bg-danger text-light hot">HOT</span>
                       <div class="image-container  w-50">
                         <img class="card-img-top  w-100" src="./assets/2.jpg" alt="Card image cap">
+                        <div class="icon-text">
+                          <i class="fa fa-camera"></i> <span  class="mr-2 ms-1">28</span>
+                      </div>
                         <div class="icon-container">
                           <button class="icon-btn">
                             <i class="fa fa-heart"></i>
@@ -1176,16 +1204,8 @@
 
 
         // Function to toggle visibility of div2
-        function toggleDiv() {
-    const div2 = document.getElementById('div2');
-    const selectPropertyText = document.getElementById('selectPropertyText');
+      
 
-    // Toggle display of div2
-    div2.style.display = div2.style.display === 'none' ? 'block' : 'none';
-
-    // Toggle visibility of "Select Property" text
-    selectPropertyText.style.display = selectPropertyText.style.display === 'none' ? 'inline' : 'none';
-}
 
   
 
