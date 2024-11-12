@@ -1,4 +1,11 @@
-.card img{
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}.card img{
     width: 300px;
     height: 300px;
 }
@@ -78,7 +85,7 @@
 .card:hover {
     box-shadow: 0 4px 15px rgba(8, 153, 64, 0.5); /* Optional shadow effect on hover */
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: transform 0.5s ease;
 }
 
@@ -124,7 +131,18 @@
     color: white;
     cursor: pointer;
   }
-  
+  .icon-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
   .icon-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);  /* Slightly darker on hover */
   }
@@ -281,13 +299,19 @@
     opacity: 0;
   }
   .content-container1 {
-    background-color: rgba(0, 0, 0, 1); /* Black background with low opacity */
+    background-color: rgba(0, 0, 0, 0.9); /* Solid black background */
     color: white;
     padding: 5px 10px;
     display: flex;
     flex-direction: column;
     gap: 10px; /* Spacing between rows */
-  }
+    position: fixed;
+   margin-top:250px; /* Adjust this value as needed to set it below the header */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Keeps it on top of other content */
+}
+
 
 
 /* Row styling */
@@ -339,3 +363,26 @@
     gap: 20px; /* Adjust spacing as needed */
     padding: 10px;
     }
+
+   /* .filter_div{
+    background-color: white;
+   padding: 5px;
+   border-radius: 15px;
+   width: 80%;
+   margin-bottom: 3px;
+   } */
+
+   .styled-input_price_min,.styled-input_price_Max{
+   width: 80%;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+   }
+   .styled-input_price_min:focus,.styled-input_price_Max:focus {
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(153, 153, 153, 0.5);
+}
