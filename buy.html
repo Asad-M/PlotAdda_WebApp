@@ -461,7 +461,7 @@
       <h1 class="text-center">  P L O T S A D D A </h1>
     </div> -->
   </header>
-  <div class="content-container1" style="background-color: rgba(0, 0, 0, 0.8); padding: 5px 30px;  position: fixed; top: 73px; left: 0; width: 100%; z-index: 999;">
+  <div class="content-container1" style="background-color: #28a745; padding: 5px 30px;  position: fixed; top: 73px; left: 0; width: 100%; z-index: 999;">
 
 
     <div class="row">
@@ -921,10 +921,129 @@
   </div>
 </div>
 
+
+<div class="filter_div col-md-3">
+  <div class="label_area">
+      <label for="min-area" style="color: white;"><b>Area</b></label>
+  </div>
+
+  <!-- Display Selected Area Range -->
+  <div style="position: relative;">
+      <div id="area_div">
+          <h6 class="areaTxt">0 to Any</h6>
+      </div>
+
+      <!-- Dropdowns for Area Selection (Initially Hidden) -->
+      <div id="area-range-dropdown" class="d-flex_area" style="display: none; height: 336; background-color: white; border-radius: 5px; padding: 10px; position: absolute; z-index: 3; border: 1px solid #111111;">
+          <div class="area-input">
+              <label style="margin-left: 70px;">Min:</label>
+              <input type="text" class="styled-input_area_min" style="margin-left: 10px;" placeholder="0">
+              <div class="btn-group-wrap_area">
+                  <!-- Min Values -->
+                  <input type="radio" class="btn-check" name="min-area" id="min-area1" value="0" checked>
+                  <label class="btn btn-outline-primary" for="min-area1">0</label>
+
+                  <input type="radio" class="btn-check" name="min-area" id="min-area2" value="2">
+                  <label class="btn btn-outline-primary" for="min-area2">2</label>
+
+                  <input type="radio" class="btn-check" name="min-area" id="min-area3" value="4">
+                  <label class="btn btn-outline-primary" for="min-area3">4</label>
+
+                  <input type="radio" class="btn-check" name="min-area" id="min-area4" value="6">
+                  <label class="btn btn-outline-primary" for="min-area4">6</label>
+
+                  <input type="radio" class="btn-check" name="min-area" id="min-area5" value="8">
+                  <label class="btn btn-outline-primary" for="min-area5">8</label>
+
+                  <input type="radio" class="btn-check" name="min-area" id="min-area6" value="10">
+                  <label class="btn btn-outline-primary" for="min-area6">10</label>
+
+                  <input type="radio" class="btn-check" name="min-area" id="min-area7" value="12">
+                  <label class="btn btn-outline-primary" for="min-area7">12</label>
+
+                  <input type="radio" class="btn-check" name="min-area" id="min-area8" value="14">
+                  <label class="btn btn-outline-primary" for="min-area8">14</label>
+              </div>
+          </div>
+
+          <div class="area-input">
+              <label style="margin-left: 70px;">Max:</label>
+              <input type="text" class="styled-input_area_max" style="margin-left: 10px;" placeholder="Any">
+              <div class="btn-group-wrap_area">
+                  <!-- Max Values -->
+                  <input type="radio" class="btn-check" name="max-area" id="max-area1" value="Any" checked>
+                  <label class="btn btn-outline-primary" for="max-area1">Any</label>
+
+                  <input type="radio" class="btn-check" name="max-area" id="max-area2" value="2">
+                  <label class="btn btn-outline-primary" for="max-area2">2</label>
+
+                  <input type="radio" class="btn-check" name="max-area" id="max-area3" value="4">
+                  <label class="btn btn-outline-primary" for="max-area3">4</label>
+
+                  <input type="radio" class="btn-check" name="max-area" id="max-area4" value="6">
+                  <label class="btn btn-outline-primary" for="max-area4">6</label>
+
+                  <input type="radio" class="btn-check" name="max-area" id="max-area5" value="8">
+                  <label class="btn btn-outline-primary" for="max-area5">8</label>
+
+                  <input type="radio" class="btn-check" name="max-area" id="max-area6" value="10">
+                  <label class="btn btn-outline-primary" for="max-area6">10</label>
+
+                  <input type="radio" class="btn-check" name="max-area" id="max-area7" value="12">
+                  <label class="btn btn-outline-primary" for="max-area7">12</label>
+
+                  <input type="radio" class="btn-check" name="max-area" id="max-area8" value="14">
+                  <label class="btn btn-outline-primary" for="max-area8">14</label>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<script>
+  // JavaScript for Toggle and Update
+const areaDiv = document.getElementById('area_div');
+const areaDropdown = document.getElementById('area-range-dropdown');
+const areaTxt = document.querySelector('.areaTxt');
+const minAreaInputBox = document.querySelector('.styled-input_area_min');
+const maxAreaInputBox = document.querySelector('.styled-input_area_max');
+
+// Initial values for min and max area
+let minArea = "0";
+let maxArea = "Any";
+
+// Set initial text in areaTxt
+areaTxt.textContent = `${minArea} to ${maxArea}`;
+minAreaInputBox.value = minArea;
+maxAreaInputBox.value = maxArea;
+
+// Toggle visibility of the dropdown when areaDiv is clicked
+areaDiv.addEventListener('click', function() {
+    areaDropdown.style.display = areaDropdown.style.display === 'none' ? 'flex' : 'none';
+});
+
+// Update the selected minArea when a radio button is clicked
+document.querySelectorAll('input[name="min-area"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        minArea = this.value;
+        areaTxt.textContent = `${minArea} to ${maxArea}`;
+        minAreaInputBox.value = minArea;
+    });
+});
+
+// Update the selected maxArea when a radio button is clicked
+document.querySelectorAll('input[name="max-area"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        maxArea = this.value;
+        areaTxt.textContent = `${minArea} to ${maxArea}`;
+        maxAreaInputBox.value = maxArea;
+    });
+});
+
+</script>
 <!-- bed rooms drop down -->
 
 
-<div id="home_opt" class="col-md-3 d-flex w-50" style="background-color:transparent;">
+<div id="home_opt" class="col-md-3 d-flex" style="background-color:transparent;">
   <div class="filter_div w-100 mb-3" style="padding-right: 15px;">
       <label for="bedrooms" style="color: white;"><b>Beds</b></label>
       <select class="form-control" id="bedrooms" name="roomNo">
