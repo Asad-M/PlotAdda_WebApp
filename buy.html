@@ -833,15 +833,15 @@
         
                 // Add "Any" option manually
                 document.write(`
-                    <input type="radio" class="btn-check" name="min-price" id="min-value1" value="any" checked>
-                    <label class="btn btn-outline-primary" for="min-value1">Any</label>
+                    <input type="radio" class="btn-check" name="max-price" id="max-value1" value="any" checked>
+                    <label class="btn btn-outline-primary" for="max-value1">Any</label>
                 `);
         
                 // Generate dynamic values
                 maxPriceValues.forEach((value, index) => {
-                    const radioId = `min-value${index + 2}`; // Start from 2 because "Any" is already 1
+                    const radioId = `max-value${index + 2}`; // Start from 2 because "Any" is already 1
                     document.write(`
-                        <input type="radio" class="btn-check" name="min-price" id="${radioId}" value="${value}">
+                        <input type="radio" class="btn-check" name="max-price" id="${radioId}" value="${value}">
                         <label class="btn btn-outline-primary" for="${radioId}">${value.toLocaleString()}</label>
                     `);
                 });
