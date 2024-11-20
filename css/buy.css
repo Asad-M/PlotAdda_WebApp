@@ -1,6 +1,6 @@
 
 .header{
-    position: fixed;
+   
     top: 0;
     left: 0;
     width: 100%;
@@ -299,14 +299,14 @@
     opacity: 0;
   }
   .content-container1 {
-    background-color: rgba(0, 0, 0, 0.9); /* Solid black background */
+     /* Solid black background */
     color: white;
     padding: 5px 10px;
     display: flex;
     flex-direction: column;
     gap: 10px; /* Spacing between rows */
     position: fixed;
-   margin-top:250px; /* Adjust this value as needed to set it below the header */
+   margin-top:0px; /* Adjust this value as needed to set it below the header */
     left: 0;
     width: 100%;
     z-index: 999; /* Keeps it on top of other content */
